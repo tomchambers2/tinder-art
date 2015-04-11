@@ -1,0 +1,50 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: sans-serif;
+}
+
+.header {
+	height: 10%;
+}
+
+.chat-screen {
+	height: 80%;
+	overflow: scroll;
+}
+
+.chat-screen .message {
+	min-height: 60px;
+}
+.chat-screen .message.right {
+	//background: #349BF8;
+	//color: #fff;
+}	
+.chat-screen .message.right::after {
+	//border-color: #349BF8;
+}
+.chat-screen .message.left {
+	//background: #E6E6EB;
+	//color: #000;
+}
+.chat-screen .message.left::after {
+	//border-color: #E6E6EB;
+}
+
+.input-bar {
+	height: 10%;
+	background: #36508D;
+}
+.input-bar-inner {
+	width: 90%;
+	margin: auto;
+}
+
+.user-input {
+	height: 100%;
+	width: 80%;
+}
+.submit {
+	width: 15%;
+}
