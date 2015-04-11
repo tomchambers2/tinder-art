@@ -1,6 +1,44 @@
 <script src="/socket.io/socket.io.js"></script>
-<script>
-  var socket = io();
-</script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 
-<h1>Hello</h1>
+<h1>Dating chat</h1>
+
+<style>
+	.chat-screen {
+
+	}
+	.chat-screen .message {
+		min-height: 60px;
+	}
+	.chat-screen .message:nth-of-type(odd) {
+		background: #000;
+		color: #fff;
+	}	
+</style>
+
+<div class="chat-screen">
+	
+</div>
+
+<input type="text" class="user-input"><input type="submit" class="submit">
+
+<script>
+$(document).ready(function() {
+	console.log('setting up');
+  var socket = io();
+
+  function addMessage(message) {
+	$('.chat-screen').append('<div class="message">'+message+"</div>")  	
+  }
+
+  socket.on('chat message',  function(message) {
+  	console.log(message);
+  	addMessage(message)
+  })
+
+  $('.submit').click(function() {
+  	console.log('sent it');
+  	socket.emit('process message', $('.user-input').val())
+  })
+})
+</script>

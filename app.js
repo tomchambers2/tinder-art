@@ -1,6 +1,6 @@
 var app = require('express')()
 var http = require('http').Server(app)
-require('./io')(http)
+require('./lib/io')(http)
 
 app.get('/', function(req, res) {
 	res.sendfile('views/index.html')
