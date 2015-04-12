@@ -1,6 +1,8 @@
 $(document).ready(function() {
   var socket = io();
 
+  socket.emit('set partner', data.partnerId)
+
   socket.on('chat message',  function(chat) {
   	addMessage(chat)
   })
@@ -16,7 +18,7 @@ $(document).ready(function() {
   }
 
   function sendMessage(message) {
-  	socket.emit('process message', $('.user-input').val())
+  	socket.emit('send message', $('.user-input').val())
   }
 
   function flushInput(input) {
