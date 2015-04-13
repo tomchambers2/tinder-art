@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var socket = io();
 
-  socket.emit('set partner', data.partnerId)
+  socket.emit('set partner', data)
 
   socket.on('chat message',  function(chat) {
   	addMessage(chat)

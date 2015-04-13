@@ -15,7 +15,8 @@ html
     body
         script.
             var data = {
-                partnerId: '#{partner._id}'
+                matchId: '#{partner._id}',
+                partnerId: '#{partner.person._id}'
             }
         .row
             .col-md-8.col-sm-offset-2.text-center

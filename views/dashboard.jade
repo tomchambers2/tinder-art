@@ -6,27 +6,42 @@ html
 		title Dashboard
 
 	body
-		div(class='row')
-			div(class='col-md-8 col-sm-offset-2 text-center')
-				h1 Tinder dashboard
-
-		div(class='row')
-			div(class='col-md-12')
-				table(class='table table-striped')
-					tr
-						td(nowrap) ID
-						td(nowrap) Name
-						td(nowrap) Matched
-						td(nowrap) Last activity
-						td(nowrap) Messages received
-						td(nowrap) Messages
-					for match in matches
+		.container-fluid
+			.row
+				.col-md-8.col-sm-offset-2.text-center
+					h1 Tinder dashboard
+			.row.text-center
+				.col-md-4
+					h2 Total matches
+				.col-md-4
+					h2 Reply rate
+				.col-md-4
+					h2 Profile created				
+			.row.text-center
+				.col-md-4
+					h1=stats.totalMatches
+				.col-md-4
+					h1 #{Math.floor(stats.matchRate*100)}%
+				.col-md-4
+					h1=timeSince(stats.firstMatch)
+			
+			.row
+				.col-md-12
+					table.table.table-striped
 						tr
-							td(nowrap)=truncate(match._id)
-							td(nowrap)=match.person.name
-							td(nowrap)=timeSince(match.created_date)
-							td(nowrap)=timeSince(match.last_activity_date)
-							td(nowrap)=match.message_count
-							td(nowrap)
-								for message in match.messages
-									p=message.message
+							td(nowrap) ID
+							td(nowrap) Name
+							td(nowrap) Matched
+							td(nowrap) Last activity
+							td(nowrap) Messages received
+							td(nowrap) Messages
+						for match in matches
+							tr
+								td(nowrap)=truncate(match._id)
+								td(nowrap)=match.person.name
+								td(nowrap)=timeSince(match.created_date)
+								td(nowrap)=timeSince(match.last_activity_date)
+								td(nowrap)=match.message_count
+								td(nowrap)
+									for message in match.messages
+										p=message.message
