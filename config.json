@@ -1,0 +1,5 @@
+{
+	"clientId": "1045371398809653",
+	"clientSecret": "720dc10ee1a67a2f37483f737dd6a6d8",
+	"redirectUri": "http://localhost:3000/dashboard"
+}

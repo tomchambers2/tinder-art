@@ -9,7 +9,8 @@ module.exports = function(req, res, next) {
 	req.stats = {
 		totalMatches: req.matches.length,
 		matchRate: matchesWithReplies.length / req.matches.length,
-		firstMatch: moment(req.matches[req.matches.length-1].created_date)
+		firstMatch: moment(req.matches[req.matches.length-1].created_date),
+		blocks: req.blocks.length
 	}
 
 	next()
