@@ -5,18 +5,10 @@ var config = require('../config')
 var async = require('async')
 var moment = require('moment')
 
-function getUserId(token, callback) {
-	request({
-		url: 'https://graph.facebook.com/debug_token?input_token=' + token + '&access_token=' + config.clientId + '|' + config.clientSecret,
-	    method: 'GET'
-	}, function(err, response, body){
-	    if (err) return callback(err)
-        body = JSON.parse(body)
-        if (!body.data.user_id) {
-        	return callback("Could not get user id")
-        }
-        callback(null, token, body.data.userId, body.data.expires_at)
-	})	
+function getCode(req) {
+	return function(callback) {
+		callback(null, req.query.code)
+	}
 }
 
 function getToken(code, callback) {
@@ -28,16 +20,23 @@ function getToken(code, callback) {
 
 		var access_token = /^access_token=([a-zA-Z0-9]+)/.exec(body)
 		var expiry = /expires=([0-9]+)$/.exec(body)
-		console.log('token',access_token);
 		if (!access_token) return callback('Error returned'+body)
 		callback(null, access_token[1])
 	})
 }
 
-function getCode(req) {
-	return function(callback) {
-		callback(null, req.query.code)
-	}
+function getUserId(token, callback) {
+	request({
+		url: 'https://graph.facebook.com/debug_token?input_token=' + token + '&access_token=' + config.clientId + '|' + config.clientSecret,
+	    method: 'GET'
+	}, function(err, response, body){
+	    if (err) return callback(err)
+        body = JSON.parse(body)
+        if (!body.data.user_id) {
+        	return callback("Could not get user id")
+        }
+        callback(null, token, body.data.user_id, body.data.expires_at)
+	})	
 }
 
 function storeCredentials(token, userId, expires_at, callback) {
@@ -46,14 +45,12 @@ function storeCredentials(token, userId, expires_at, callback) {
 		if (err) return callback(err)
 		callback(null, token, userId)
 		redis.expire('facebook-user', expiry)
-		console.log('will expire in',expiry);
 	})
 }
 
 function getCredentials(callback) {
 	redis.hgetall('facebook-user', function(err, facebookUser) {
 		if (err) return callback (err)
-		console.log('CALLBACK', typeof callback);
 		callback(null, facebookUser)
 	})
 }
@@ -67,6 +64,7 @@ module.exports = function(req, res, next) {
 			storeCredentials
 			//TODO: set a cookie with a hash/random string to store users
 		], function(err, token, userId) {
+			console.log('returning',userId);
 			if (err) return next(err)
 			req.facebookUserId = userId,
 			req.facebookToken = token
@@ -79,7 +77,6 @@ module.exports = function(req, res, next) {
 			if (!facebookUser) return res.redirect('/login')
 			req.facebookUserId = facebookUser.userId
 			req.facebookToken = facebookUser.token
-			console.log(req.facebookUserId)
 			next()
 		})
 	}
