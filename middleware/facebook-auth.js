@@ -19,6 +19,9 @@ function getToken(code, callback) {
 	    if (err) return callback(err)
 
 		var access_token = /^access_token=([a-zA-Z0-9]+)/.exec(body)
+
+		console.log('access token',access_token[1])
+
 		var expiry = /expires=([0-9]+)$/.exec(body)
 		if (!access_token) return callback('Error returned'+body)
 		callback(null, access_token[1])
@@ -56,16 +59,19 @@ function getCredentials(callback) {
 }
 
 module.exports = function(req, res, next) {
-	if (req.query.code) {
+	if (req.query.token) {
+		//page has the token and has been sent locally
+	} else if (req.query.code) {
 		async.waterfall([
 			getCode(req),
 			getToken,
 			getUserId,
 			storeCredentials
-			//TODO: set a cookie with a hash/random string to store users
+			//TODO: set a cookie with a hash/random string to store users in redis
 		], function(err, token, userId) {
 			console.log('returning',userId);
 			if (err) return next(err)
+				console.log('returning token',token);
 			req.facebookUserId = userId,
 			req.facebookToken = token
 			next()

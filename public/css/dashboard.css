@@ -1,0 +1,22 @@
+.dead {
+	background: #D04B28;
+}
+
+.active-user {
+	background: #5FD046;
+}
+
+.unused {
+}
+
+.dead:before {
+	content: 'Dead';
+}
+
+.active-user:before {
+	content: 'Active';
+}
+
+.unused:before {
+	content: 'Unused';
+};

@@ -1,7 +1,7 @@
 var userIcon = '<div class="col-xs-2"><div class="user-icon"></div></div>'
 
-var REFRESH_TIMER = 45
-var FRAME_RATE = 20
+var REFRESH_TIMER = 3
+var FRAME_RATE = 60
 var timerInnerOffset = 0
 var TIMER_CACHE = []
 
@@ -23,12 +23,14 @@ $(document).ready(function() {
 
     this.start = function(callback) {
       timerInnerOffset = 0
+      $('.timer .flashing').hide()
       $('.timer .inner').css({ 'margin-top': '0px' })
       function moveTimer() {
         if (timerDead) return
         timerInnerOffset += increment
         $('.timer .inner').css({ 'margin-top': timerInnerOffset+'px' })
         if (timerInnerOffset > timerHeight) {
+          $('.timer .flashing').show()
           return callback()
         }
         setTimeout(moveTimer, 1000 / FRAME_RATE)
@@ -64,10 +66,17 @@ $(document).ready(function() {
 
   socket.emit('set partner', data)
 
-  socket.on('fresh partner', function(partnerName, partnerId) {
-    //set name
-    $('.partner-name').text(partnerName)
-    $('.chat-screen').html()
+  socket.on('new partner', function(data) {
+    console.log('setting new partner',data);
+    $('.partner-name').text(data.name)
+    $('.chat-screen').html('')
+    data.messages.forEach(function(messageObj) {
+      addMessage({ user: 'remote', message: messageObj.message })
+    })
+    var timer = new Timer()
+    timer.start(function() {
+      refreshPartner()
+    })
   })
 
   socket.on('chat message',  function(chat) {
@@ -93,11 +102,12 @@ $(document).ready(function() {
 
   function addMessage(chat) {
     var side = chat.type === 'user' ? 'right' : 'left'
-    $('.chat-screen').append('<div class="row"><div class="col-xs-10"><div class="message triangle-isosceles '+side+'">'+chat.message+"</div></div>"+userIcon+'</div>')  	
+    var icon = chat.type === 'user' ? userIcon : ''
+    $('.chat-screen').append('<div class="row"><div class="col-xs-10"><div class="message triangle-isosceles '+side+'">'+chat.message+"</div></div>"+icon+'</div>')  	
     scrollBottom()
   }
 
-  addMessage({ type: 'user', message: 'blah' })
+  //addMessage({ type: 'user', message: 'blah' })
 
   function sendMessage(message) {
   	socket.emit('send message', $('.user-input').val())

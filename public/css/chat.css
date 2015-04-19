@@ -80,15 +80,38 @@ html, body {
 	overflow: hidden;
 	height: 60px;
 	width: 60px;
-	margin-top: 5px;
+	margin-top: 7px;
 }
 
-.timer .inner {
+.timer .inner, .timer .flashing {
 	background: #eee;
 	height: 60px;
 	width: 60px;
 	position: relative;
-	transition: all 0.016s;
+}
+
+.timer .flashing {
+	top: 0;
+	border-radius: 9999px;
+	display: none;
+	background: #D0CC53;	
+	-webkit-animation-name: flash;
+	-webkit-animation-duration: 600ms;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes flash {
+	0% {
+		background: #D0CC53;
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;	
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .error {

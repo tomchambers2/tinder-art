@@ -8,7 +8,7 @@ html
         script(src='/lib/bootstrap/3.3.4/js/bootstrap.min.js')
         title Chat!
         script(src='/javascript/chat.js')
-        link(rel='stylesheet' href='/css/style.css')
+        link(rel='stylesheet' href='/css/chat.css')
         link(rel='stylesheet' href='/css/bubbles.css')
         script(src='/lib/mousetrap.min.js')
         script(src='/javascript/keyboard-shortcuts.js')
@@ -26,6 +26,7 @@ html
                             Generic dating app - connected to <span class="partner-name">#{partner.person.name}</span>
                 .col-md-2
                     .timer
+                        .flashing
                         .inner
     
         .chat-screen                      
@@ -50,6 +51,7 @@ html
 
         .error
             h1 Lost connection to server!
+            h2 Messages will be queued and sent on reconnection
 
         .debug.hidden
             div(class='col-md-12')

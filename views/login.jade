@@ -15,6 +15,7 @@ html
                 .col-md-12.text-center
                     .col-md-12.text-center
                         p #{clientId}
-                        a(href='https://www.facebook.com/dialog/oauth?client_id=#{clientId}&response_type=code&redirect_uri=http://localhost:3000/dashboard')
+                        //a(href='https://www.facebook.com/dialog/oauth?client_id=#{clientId}&response_type=code&type=web_server&redirect_uri=http://localhost:3000/dashboard&scope=basic_info,user_photos,email,public_profile,user_about_me,user_activities,user_birthday,user_education_history,user_friends,user_interests,user_likes,user_location,user_relationship_details')
+                        a(href='https://www.facebook.com/dialog/oauth?client_id=464891386855067&redirect_uri=http://localhost:3000/facebook-auth&scope=basic_info,email,public_profile,user_about_me,user_activities,user_birthday,user_education_history,user_friends,user_interests,user_likes,user_location,user_photos,user_relationship_details&response_type=token') 
                             button.text-center.btn.btn-lg.btn-primary.
                                 Authenticate with facebook
