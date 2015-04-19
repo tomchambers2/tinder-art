@@ -13,7 +13,8 @@ var generateMatches = require('./middleware/generate-matches')
 var facebookAuth = require('./middleware/facebook-auth')
 
 module.exports = function(app) {
-	app.get('/chat', logger, facebookAuth, getChatPartner, chatController)
+	//app.get('/chat', logger, facebookAuth, getChatPartner, chatController)
+	app.get('/chat', logger, chatController)
 	app.get('/dashboard', logger, facebookAuth, getMatches, getBlocks, generateStats, dashboardController)	
 
 	app.get('/login', logger, loginController)

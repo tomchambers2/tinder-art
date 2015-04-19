@@ -7,45 +7,54 @@ html
         link(href='/lib/bootstrap/3.3.4/css/bootstrap.min.css' rel='stylesheet')
         script(src='/lib/bootstrap/3.3.4/js/bootstrap.min.js')
         title Chat!
-        script(src='chat.js')
-        link(rel='stylesheet' href='/style.css')
-        link(rel='stylesheet' href='/bubbles.css')
+        script(src='/javascript/chat.js')
+        link(rel='stylesheet' href='/css/style.css')
+        link(rel='stylesheet' href='/css/bubbles.css')
         script(src='/lib/mousetrap.min.js')
-        script(src='keyboard-shortcuts.js')
+        script(src='/javascript/keyboard-shortcuts.js')
     body
         script.
             var data = {
                 matchId: '#{partner._id}',
                 partnerId: '#{partner.person._id}'
             }
-        .row
-            .col-md-8.col-sm-offset-2.text-center
-                .header
-                    h1 Generic dating app - connected to #{partner.person.name}
+
+        .header
+            .row
+                .col-md-8.col-sm-offset-2.text-center
+                        h1.
+                            Generic dating app - connected to <span class="partner-name">#{partner.person.name}</span>
+                .col-md-2
+                    .timer
+                        .inner
     
-        .row
-            .col-md-12
-                .chat-screen                      
-                    for item in partner.messages   
-                        if item.from == partner.person._id
+        .chat-screen                      
+            for item in partner.messages   
+                if item.from == partner.person._id
+                    .row
+                        .col-md-12
                             .message.triangle-isosceles.left.
                                 #{item.message}
-                        else
+                else
+                    .row
+                        .col-md-10
                             .message.triangle-isosceles.right.
                                 #{item.message}
 
-        .row
-            .col-md-12
-                .input-bar
-                    .input-bar-inner
-                        input.user-input(type='text')
-                        input.submit(type='submit')                
+        .input-bar
+            .row
+                .col-md-12
+                    .send-message
+                        input.user-input(type='text' autofocus).form-control
+                        input.submit(type='submit' value='Send message').btn.btn-success
+
+        .error
+            h1 Lost connection to server!
 
         .debug.hidden
             div(class='col-md-12')
                 h1 Chatting with #{partner.person.name}
                 div
                     p=partner._id
-                    p=partner.messages
+                    p=JSON.stringify(partner.messages)
                     p=partner.person.bio
-                div=JSON.stringify(partner)

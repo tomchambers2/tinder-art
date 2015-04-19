@@ -50,7 +50,6 @@ html
                             td(nowrap) Matched
                             td(nowrap) Last activity
                             td Messages
-                            td Make chat partner
                             td Remove
                         for match in matches
                             tr
@@ -61,10 +60,7 @@ html
                                 td
                                     ul
                                         for message in match.messages
-                                            li=message.message
-                                td
-                                    button.btn.btn-primary.
-                                        Select                                            
+                                            li=message.message                                           
                                 td
                                     button.btn.btn-primary.
                                         Remove
