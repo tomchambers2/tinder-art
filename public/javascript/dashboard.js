@@ -17,6 +17,8 @@ $(document).ready(function() {
 
 			console.log('returned from remove',data);
 			if (data.success) {
+				$('*[data-user-id="'+userId+'"] .status').removeClass('unused')
+				$('*[data-user-id="'+userId+'"] .status').removeClass('active')
 				$('*[data-user-id="'+userId+'"] .status').addClass('dead')
 			}
 			$(remove).hide()
