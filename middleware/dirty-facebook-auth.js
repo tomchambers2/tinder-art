@@ -40,10 +40,10 @@ function refreshCredentials(callback) {
 
 }
 
-function storeCredentials(token, userId, expires_at) {
+function storeCredentials(token, userId, expiresIn) {
 	redis.hmset('facebook-user', { userId: userId, token: token }, function(err, reply) {
 		if (err) throw err
-		redis.expire('facebook-user', expiry)
+		redis.expire('facebook-user', expiresIn)
 	})
 }
 
