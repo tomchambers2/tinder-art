@@ -33,7 +33,7 @@ function refreshCredentials(callback) {
 		var access_token = /access_token=([a-zA-Z0-9]+)/.exec(response.request.uri.hash)
 		var expiresIn = /expires_in=([0-9]+)$/.exec(response.request.uri.hash)
 		console.log(expiresIn);
-		storeCredentials(access_token[1], userId, expiresIn)
+		storeCredentials(access_token[1], userId, expiresIn[1])
 
 		callback(err, userId, access_token[1])
 	})
@@ -41,6 +41,7 @@ function refreshCredentials(callback) {
 }
 
 function storeCredentials(token, userId, expiresIn) {
+	console.log('Storing crentials to expire in',expiresIn);
 	redis.hmset('facebook-user', { userId: userId, token: token }, function(err, reply) {
 		if (err) throw err
 		redis.expire('facebook-user', expiresIn)
@@ -57,6 +58,7 @@ module.exports = function(req, res, next) {
 			req.facebookToken = token
 			next()
 		})
+		console.log('Credentials retrieved from redis');
 		req.facebookUserId = facebookUser.userId
 		req.facebookToken = facebookUser.token
 		next()
