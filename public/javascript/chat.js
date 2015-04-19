@@ -1,6 +1,6 @@
 var userIcon = '<div class="col-xs-2"><div class="user-icon"></div></div>'
 
-var REFRESH_TIMER = 3
+var REFRESH_TIMER = 120
 var FRAME_RATE = 60
 var timerInnerOffset = 0
 var TIMER_CACHE = []
@@ -80,12 +80,12 @@ $(document).ready(function() {
   })
 
   socket.on('chat message',  function(chat) {
-    //if (chat.type==='remote') {
+    if (chat.type==='remote') {
       var timer = new Timer()
       timer.start(function() {
         refreshPartner()
       })
-    //}
+    }
   	addMessage(chat)
   })
 
