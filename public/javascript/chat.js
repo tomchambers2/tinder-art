@@ -89,6 +89,11 @@ $(document).ready(function() {
   	addMessage(chat)
   })
 
+  socket.on('phrases', function(phrases) {
+    console.log('new phrases are:',phrases);
+    //change the three barriers
+  })
+
   $('.user-input').keyup(function(e) {
     if (e.which===13) onSubmitMessage()
   })

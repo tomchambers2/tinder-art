@@ -24,7 +24,6 @@
     "socket.io": "^1.3.5",
     "speakeasy-nlp": "0.2.2",
     "tinder_pro": "git://github.com/tomchambers2/tinder_pro.git",
-    "tough-cookie-filestore": "0.0.1",
     "url": "^0.10.3"
   }
 }
