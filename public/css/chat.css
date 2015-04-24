@@ -6,7 +6,7 @@ html, body {
 }
 
 .header {
-	height: 10%;
+	height: 15%;
 	border-bottom: 5px solid #eee;
 	background: #36508D;
 	color: #eee;
@@ -17,10 +17,11 @@ html, body {
 }
 
 .chat-screen {
-	height: 80%;
+	height: 70%;
 	width: 80%;
 	margin: auto;
-	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .chat-screen .message {
@@ -29,15 +30,8 @@ html, body {
 
 .input-bar {
 	border-top: 5px solid #eee;
-	height: 10%;
+	height: 15%;
 	background: #36508D;
-}
-
-.send-message {
-	margin: auto;
-	width: 80%;
-	margin-top: 15px;
-	font-size: 36px;
 }
 
 .user-input {
@@ -48,6 +42,30 @@ html, body {
 	border-bottom-right-radius: 0;
 	border-top-right-radius: 0;	
 }
+
+.send-message {
+	margin: auto;
+	width: 80%;
+	margin-top: 15px;
+	font-size: 36px;
+}
+
+.row.phrases {
+	height: 100%;
+}
+
+.btn.phrase {
+	border: 3px solid #EEEEEE;
+	border-radius: 0;
+	color: #484545;
+	background: #FFFEFE;
+	height: 100%;	
+	font-size: 30px;
+}
+.btn.phrase:hover {
+	background: #ddd;
+}
+
 .submit {
 	width: 20%;
 	float: left;

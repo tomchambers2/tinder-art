@@ -1,7 +1,23 @@
 {
-	"hello": [
-		"Hi there",
-		"What's up",
-		"How are you"
-	]
+	"cinderella": {
+		"hello": [
+			"Hi there",
+			"What's up",
+			"How are you"
+		]
+	},
+	"feminist": {
+		"hello": [
+			"Hi there",
+			"What's up",
+			"How are you"
+		]
+	},
+	"barbie": {
+		"hello": [
+			"Hi there",
+			"What's up",
+			"How are you"
+		]
+	}		
 }

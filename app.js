@@ -1,16 +1,16 @@
 var express = require('express')
 var app = express()
-var config = require('./config')
+var config = require('./data/config')
 var http = require('http').Server(app)
 var routes = require('./routes')
 var helpers = require('./lib/helpers')
-require('./lib/io')(http)
+var io = require('./lib/io')(http)
+var socketRoutes = require('./socket-routes')
 
 app.use(express.static('public'))
 
 app.use(function(err, req, res, next) {
-	console.log("A BIG FUCKING ERROR");
-  console.log('got err',err)
+	console.log('Caught an error!',err)
 });
 
 app.set('view engine', 'jade')
@@ -19,6 +19,7 @@ app.locals.truncate = helpers.truncate
 app.locals.timeSince = helpers.timeSince
 
 routes(app)
+socketRoutes(io)
 
 var port = process.env.PORT || 3000
 http.listen(port, function() {

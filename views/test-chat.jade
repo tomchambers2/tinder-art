@@ -41,15 +41,14 @@ html
                         .col-md-10
                             .message.triangle-isosceles.right.
                                 #{item.message}
-
+        
         .input-bar
-            .row.phrases
-                .col-md-4.btn.phrase.text-center.
-                    LOADING
-                .col-md-4.btn.phrase.text-center.
-                    LOADING
-                .col-md-4.btn.phrase.text-center.
-                    LOADING
+            .row
+                .col-md-12
+                    .send-message
+                        input.user-input(type='text' autofocus).form-control
+                        input.submit(type='submit' value='Send message').btn.btn-success
+                        
         .error
             h1 Lost connection to server!
             h2 Messages will be queued and sent on reconnection

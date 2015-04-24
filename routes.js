@@ -1,9 +1,10 @@
-var chatController = require('./controllers/chat')
-var dashboardController = require('./controllers/dashboard')
-var generateMatchesController = require('./controllers/generate-matches')
-var loginController = require('./controllers/login')
-var killUserController = require('./controllers/kill-user')
-var facebookAuthController = require('./controllers/facebook-auth')
+var chatHandler = require('./handlers/express/chat')
+var testChatHandler = require('./handlers/express/test-chat')
+var dashboardHandler = require('./handlers/express/dashboard')
+var generateMatchesHandler = require('./handlers/express/generate-matches')
+var loginHandler = require('./handlers/express/login')
+var killUserHandler = require('./handlers/express/kill-user')
+var facebookAuthHandler = require('./handlers/express/facebook-auth')
 
 var logger = require('./middleware/logger')
 
@@ -16,15 +17,17 @@ var dirtyFacebookAuth = require('./middleware/dirty-facebook-auth')
 var killUser = require('./middleware/kill-user')
 
 module.exports = function(app) {
-	app.get('/chat', logger, dirtyFacebookAuth, getChatPartner, chatController)
+	app.get('/dashboard', logger, dirtyFacebookAuth, getMatches, getBlocks, generateStats, dashboardHandler)	
 
-	app.get('/dashboard', logger, dirtyFacebookAuth, getMatches, getBlocks, generateStats, dashboardController)	
+	app.get('/login', logger, loginHandler)
 
-	app.get('/login', logger, loginController)
+	app.get('/facebook-auth', logger, facebookAuthHandler)
 
-	app.get('/facebook-auth', logger, facebookAuthController)
+	app.get('/api/generate-matches', logger, dirtyFacebookAuth, generateMatches, generateMatchesHandler)
 
-	app.get('/api/generate-matches', logger, dirtyFacebookAuth, generateMatches, generateMatchesController)
+	app.get('/api/kill-user/:userId', logger, dirtyFacebookAuth, killUser, killUserHandler)
 
-	app.get('/api/kill-user/:userId', logger, dirtyFacebookAuth, killUser, killUserController)
+	app.get('/test-chat', logger, dirtyFacebookAuth, getChatPartner, testChatHandler)
+
+	app.get('/', logger, dirtyFacebookAuth, getChatPartner, chatHandler)
 }

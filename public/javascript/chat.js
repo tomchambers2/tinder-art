@@ -64,7 +64,10 @@ $(document).ready(function() {
     $('.error').show()
   })
 
-  socket.emit('set partner', data)
+  socket.on('request partner', function() {
+    console.log('Will send loaded partner to server');
+    socket.emit('set partner', data)
+  })
 
   socket.on('new partner', function(data) {
     console.log('setting new partner',data);
@@ -91,18 +94,34 @@ $(document).ready(function() {
 
   socket.on('phrases', function(phrases) {
     console.log('new phrases are:',phrases);
-    //change the three barriers
+    $('.phrase').each(function(index) {
+      console.log($(this),index,phrases[index]);
+      $(this).text(phrases[index])
+    })
   })
 
+  /* test chat only */
   $('.user-input').keyup(function(e) {
-    if (e.which===13) onSubmitMessage()
+    if (e.which===13) onSubmitInput()
   })
 
-  $('.submit').click(onSubmitMessage)
+  $('.submit').click(onSubmitInput)
 
-  function onSubmitMessage() {    
-  	sendMessage($('.user-input').val())
-  	flushInput($('.user-input'))
+
+  function onSubmitInput() {  
+    console.log('submitting input:',$('.user-input').val());  
+    sendMessage($('.user-input').val())
+    addMessage({ type: 'user', message: $('.user-input').val() })
+    flushInput($('.user-input'))
+  }  
+  /* only here for test-chat */
+
+  $('.phrase').click(onSubmitMessage)
+
+  function onSubmitMessage() {  
+  console.log('sending a message',$(this).text());  
+  	sendMessage($(this).text())
+    addMessage({ type: 'user', message: $(this).text() })
   }
 
   function addMessage(chat) {
@@ -115,7 +134,7 @@ $(document).ready(function() {
   //addMessage({ type: 'user', message: 'blah' })
 
   function sendMessage(message) {
-  	socket.emit('send message', $('.user-input').val())
+  	socket.emit('send message', message)
   }
 
   function flushInput(input) {
