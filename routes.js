@@ -29,5 +29,10 @@ module.exports = function(app) {
 
 	app.get('/test-chat', logger, dirtyFacebookAuth, getChatPartner, testChatHandler)
 
+	app.get('/data-input', function(req, res) {
+		return res.render('data-input')
+	})
+
 	app.get('/', logger, dirtyFacebookAuth, getChatPartner, chatHandler)
+
 }

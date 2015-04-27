@@ -1,23 +1,152 @@
 {
-	"cinderella": {
-		"hello": [
-			"Hi there",
-			"What's up",
-			"How are you"
-		]
-	},
-	"feminist": {
-		"hello": [
-			"Hi there",
-			"What's up",
-			"How are you"
-		]
-	},
-	"barbie": {
-		"hello": [
-			"Hi there",
-			"What's up",
-			"How are you"
-		]
-	}		
+  "princess": {
+    "hello": [
+      "Hi"
+    ],
+    "howareyou": [
+      "It's all so magical",
+      "I know you I walked with you once upon a dream"
+    ],
+    "goodbye": [
+      "Oh my goodness! It's midnight. Oh I must. Please! Please I must!",
+      "Goodbye.",
+      "I'm sorry. I guess I forgot about everything, even the time, but... but it was so wonderful. And you were so handsome, and when we danced... oh, I'm sure that even the Prince himself couldn't have been more... more... Oh, well, it-it's over, and...",
+      "Good night, my handsome prince."
+    ],
+    "nicetomeetyou": [
+      "You remind me of someone I met in the marketplace",
+      "Oh, it's wonderful."
+    ],
+    "picture": [
+      "You are so romantic, I couldn't resist you."
+    ],
+    "meetup": [
+      "Is it safe?"
+    ],
+    "noanswer": [
+      "I'm like a shooting star,I've come so far I can't go back to where I used to be!"
+    ],
+    "doubt": [
+      "It's like a dream. A wonderful dream come true."
+    ],
+    "weekend": [
+      "It’s lovely",
+      "An hundred thousand things to see"
+    ],
+    "weekendplan": [
+      "Sing! With a smile and a song, life is just like a bright, sunny day. Your cares fade away and your heart is young.",
+      "Sing! When you smile and you sing, everything is in tune and it's spring."
+    ],
+    "location": [
+      "What does it matter? I ran away, and I am not going back. My father's forcing me to get married.",
+      "Small town. ..There must be more than this provincial life!"
+    ],
+    "sorry": [],
+    "whatareyoudoing": [
+      "I wonder why each little bird has a someone to sing to"
+    ],
+    "mansappearance": [
+      "Oh, how adorable."
+    ],
+    "love": [
+      "You are so romantic, I couldn't resist you."
+    ]
+  },
+  "feminist": {
+    "hello": [
+      "Pleased to make your aquaintance"
+    ],
+    "howareyou": [
+      "I'm  tough, I'm ambitious, and I know exactly what I want."
+    ],
+    "goodbye": [
+      "Good night",
+      "Thank you"
+    ],
+    "nicetomeetyou": [
+      "Pleased to meet you"
+    ],
+    "picture": [
+      "If I want to knock a story off the front page, I just change my hairstyle.",
+      "It's not my responsibility to be beautiful. I'm not alive for that purpose. My existence is not about how desirable you find me."
+    ],
+    "meetup": [
+      "So whatever you want to do, just do it..."
+    ],
+    "noanswer": [
+      "When a man gives his opinion, he's a man. When a woman gives her opinion, she's a bitch."
+    ],
+    "doubt": [
+      "I hate men who are afraid of women's strength."
+    ],
+    "weekend": [
+      "Very good. I have so many things I'm interested in doing and that's what I am focused on right now."
+    ],
+    "weekendplan": [
+      "We must stop thinking of the individual and start thinking about what is best for society.",
+      "The future depends entirely on what each of us does every day; a movement is only people moving."
+    ],
+    "location": [
+      "We’ll find that out as time goes by"
+    ],
+    "whatareyoudoing": [
+      "Writing is the only thing that when I do it, I don't feel I should be doing something else.",
+      "A woman who aspires to be something is called a bitch."
+    ],
+    "mansappearance": [
+      "People can judge me for what I've done. And I think when somebody's out in the public eye, that's what they do. So I'm fully comfortable with who I am, what I stand for, and what I've always stood for.",
+      "Self-esteem isn't everything; it's just that there's nothing without"
+    ]
+  },
+  "sexy": {
+    "hello": [
+      "Hey sexy",
+      "I'm  tough, I'm ambitious, and I know exactly what I want."
+    ],
+    "howareyou": [
+      "How did you find me?"
+    ],
+    "goodbye": [
+      "Who said nights were for sleep?",
+      "What do I wear in bed?  Chanel No. 5, of course"
+    ],
+    "nicetomeetyou": [
+      "You know, most people really don't know me."
+    ],
+    "picture": [
+      "I want the world to see my body.",
+      "Life is more enjoyable when you are thin and pretty. I was never fat a day in my life and I never will.",
+      "The body is meant to be seen, not all covered up."
+    ],
+    "meetup": [
+      "If you can make a woman laugh, you can make her do anything.",
+      "A wise girl kisses but doesn’t love, listens but doesn’t believe, and leaves before she is left."
+    ],
+    "noanswer": [
+      "Don't fight it. Relax"
+    ],
+    "doubt": [
+      "I don't have much of a voice"
+    ],
+    "weekend": [
+      "Yeah. Real hot."
+    ],
+    "weekendplan": [
+      "No plan. It’s better to be absolutely ridiculous than absolutely boring. Story of my life.",
+      "I always get the fuzzy end of the lollipop."
+    ],
+    "location": [
+      "I'll tell you when l know you better."
+    ],
+    "whatareyoudoing": [
+      "Shopping. I don’t know who invented high heels, but all women owe him a lot!"
+    ],
+    "mansappearance": [
+      "It was suicidally beautiful."
+    ],
+    "love": [
+      "Your glasses are beginning to steam up.",
+      "I want to swim right back to you"
+    ]
+  }
 }

@@ -6,8 +6,6 @@ var categorise = require('../../lib/categorise')
 var phraseFinder = require('../../lib/phrase-finder')
 
 module.exports = function() {
-	console.log('this',this);
-
 	var count = 0
 	var tinder = new Tinder(this.facebookUser.userId, this.facebookUser.token)
 	var self = this
@@ -36,8 +34,8 @@ module.exports = function() {
 			self.emit('chat message', { type: 'remote', message: message })
 		})
 
-		//var phrases = phraseFinder(categorise(_.last(messages)))
-		var phrases = phraseFinder("hello")
+		var phrases = phraseFinder(categorise(_.last(messages)))
+		//var phrases = phraseFinder("hello")
 		self.emit('phrases', phrases)
 
 		setTimeout(function() { getUpdates(self.matchId, self.partnerId, self.lastUpdate, updateCallback) }, 5000)	  	

@@ -120,6 +120,10 @@ $(document).ready(function() {
 
   function onSubmitMessage() {  
   console.log('sending a message',$(this).text());  
+    if (!$(this).text()) {
+      console.log("User attempted to send a blank message")
+      return
+    }
   	sendMessage($(this).text())
     addMessage({ type: 'user', message: $(this).text() })
   }

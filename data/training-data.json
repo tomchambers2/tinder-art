@@ -2,5 +2,688 @@
 	{
 		"document": "some text",
 		"category": "example"
+	},
+	{
+		"document": "some text",
+		"category": "example"
+	},
+	{
+		"document": "hi",
+		"category": "hello"
+	},
+	{
+		"document": "hiya",
+		"category": "hello"
+	},
+	{
+		"document": "hey x",
+		"category": "hello"
+	},		
+	{
+		"document": "hello",
+		"category": "hello"
+	},	
+	{
+		"document": "hello...",
+		"category": "hello"
+	},	
+	{
+		"document": "well hello there x",
+		"category": "hello"
+	},	
+	{
+		"document": "hey!",
+		"category": "hello"
+	},	
+	{
+		"document": "hey",
+		"category": "hello"
+	},	
+	{
+		"document": "bonsoir",
+		"category": "hello"
+	},	
+	{
+		"document": "bonsoir bonsoir",
+		"category": "hello"
+	},	
+	{
+		"document": "hey jenna",
+		"category": "hello"
+	},	
+	{
+		"document": "hello jenna",
+		"category": "hello"
+	},	
+	{
+		"document": "ciao",
+		"category": "hello"
+	},	
+	{
+		"document": "hey there",
+		"category": "hello"
+	},	
+	{
+		"document": "hello lady!",
+		"category": "hello"
+	},	
+	{
+		"document": "hey :)",
+		"category": "hello"
+	},	
+	{
+		"document": "oi oi!",
+		"category": "hello"
+	},	
+	{
+		"document": "hey babe",
+		"category": "hello"
+	},	
+	{
+		"document": "hello jenna",
+		"category": "hello"
+	},	
+	{
+		"document": "hiya",
+		"category": "hello"
+	},	
+	{
+		"document": "hey!!",
+		"category": "hello"
+	},	
+	{
+		"document": "ola",
+		"category": "hello"
+	},	
+	{
+		"document": "hi there!",
+		"category": "hello"
+	},	
+	{
+		"document": ":-)",
+		"category": "hello"
+	},	
+	{
+		"document": "evening",
+		"category": "hello"
+	},
+	{
+		"document": "hi how are you?",
+		"category": "howareyou"
+	},	
+	{
+		"document": "hi there",
+		"category": "howareyou"
+	},		
+	{
+		"document": "how are u?",
+		"category": "howareyou"
+	},		
+	{
+		"document": "how is the end of the day?",
+		"category": "howareyou"
+	},		
+	{
+		"document": "how are u jenz?",
+		"category": "howareyou"
+	},		
+	{
+		"document": "how are you?",
+		"category": "howareyou"
+	},		
+	{
+		"document": "how's it going?",
+		"category": "howareyou"
+	},		
+	{
+		"document": "hi jenna, how are you?",
+		"category": "howareyou"
+	},	
+			{
+		"document": "hey jenna, how's your weekend going?",
+		"category": "howareyou"
+	},	
+	{
+		"document": "hi jenna, how's it going?",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hey Jenna, How's your weekend going?",
+		"category": "howareyou"
+	},				
+	{
+		"document": "Hi Jenna, how's it going?",
+		"category": "howareyou"
+	},	
+	{
+		"document": "Hi how are you?",
+		"category": "howareyou"
+	},	
+	{
+		"document": "Hello Jenna, you look great. How are you?",
+		"category": "howareyou"
+	},	
+	{
+		"document": "You're cute as a button! Are you having fun on here yet? X",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hello J ! Are you free tonight to party ? Nice pic. Nice to meet. And Sorry for my french accent ;)",
+		"category": "howareyou"
+	},	
+	{
+		"document": "Hi Jenna How are you?",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hi Jenna I'm nick love ur profile wanna chat",
+		"category": "howareyou"
+	},	
+	{
+		"document": "Soooo Miss Jenna. Come here often?",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hi Jenna How are you ?",
+		"category": "howareyou"
+	},	
+	{
+		"document": "Hi Jenna ...glad we matched...",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hello Jenna - how are u?",
+		"category": "howareyou"
+	},	
+	{
+		"document": "How r u?",
+		"category": "howareyou"
+	},
+	{
+		"document": "Heyyy how's it going?",
+		"category": "howareyou"
+	},	
+	{
+		"document": "Hey.....how's it going?",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hi, how are you?",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hi Jenna, I believe we have both matched.",
+		"category": "howareyou"
+	},	
+	{
+		"document": "Hey! How's it going ?",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hows ur evening going?",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hey, how are yah?",
+		"category": "howareyou"
+	},	
+	{
+		"document": "Hey, how's it going?",
+		"category": "howareyou"
+	},
+	{
+		"document": "Soooo Miss Jenna.",
+		"category": "howareyou"
+	},
+	{
+		"document": "See you soon",
+		"category": "goodbye"
+	},	
+	{
+		"document": "Good night",
+		"category": "goodbye"
+	},
+	{
+		"document": "Laters",
+		"category": "goodbye"
+	},
+	{
+		"document": "Bye bye",
+		"category": "goodbye"
+	},
+	{
+		"document": "bye",
+		"category": "goodbye"
+	},
+	{
+		"document": "I'm going now",
+		"category": "goodbye"
+	},
+	{
+		"document": "see you later",
+		"category": "goodbye"
+	},
+	{
+		"document": "goodbye",
+		"category": "goodbye"
+	},
+	{
+		"document": "amazing pic",
+		"category": "picture"
+	},
+
+	{
+		"document": "nice to Meet U jenna",
+		"category": "nicetomeetyou"
+	},
+	{
+		"document": "Pleased to meet you",
+		"category": "nicetomeetyou"
+	},
+	{
+		"document": "Are u up for a chat?",
+		"category": "nicetomeetyou"
+	},
+	{
+		"document": "Hey sexy lady thanks for the like",
+		"category": "nicetomeetyou"
+	},			
+
+
+	{
+		"document": "Now Jenna, that really is a very hot dress....covering an even more fabulous body within it. Love it! You get my vote.",
+		"category": "picture"
+	},
+	{
+		"document": "Err nice wall paper",
+		"category": "picture"
+	},
+	{
+		"document": "Goes really well with your dress",
+		"category": "picture"
+	},
+	{
+		"document": "Hey, nice dress!",
+		"category": "picture"
+	},
+	{
+		"document": "Is this photo legit? Very pro",
+		"category": "picture"
+	},
+	{
+		"document": "That's a very beautiful photo",
+		"category": "picture"
+	},
+	{
+		"document": "Are you an actress?",
+		"category": "picture"
+	},	
+	{
+		"document": "Wowsers you're absolutely gorgeous! Xx",
+		"category": "picture"
+	},
+	{
+		"document": "That dress you're wearing in your pic is unbelievable!! ;-)",
+		"category": "picture"
+	},
+	{
+		"document": "Hey u look sexy",
+		"category": "picture"
+	},
+	{
+		"document": "Lovely boobs",
+		"category": "picture"
+	},
+	{
+		"document": "Looks like you have an amazing body",
+		"category": "picture"
+	},
+	{
+		"document": "Hello lady! You're cute as a button! Hello J ! Are you free tonight to party ? Nice pic.",
+		"category": "picture"
+	},
+	{
+		"document": "Well hey there Jenna, looking pretty damn good there so what're you into? I'll start, I like to take charge...",
+		"category": "picture"
+	},
+	{
+		"document": "This photo suposed to be on FHM cover not tinder haha",
+		"category": "picture"
+	},	
+	{
+		"document": "That dress you're wearing in your pic is unbelievable!! ;-)",
+		"category": "picture"
+	},
+	{
+		"document": "Hi Jenna I'm nick love ur profile wanna chat",
+		"category": "picture"
+	},
+	{
+		"document": "The beads on your dress",
+		"category": "picture"
+	},
+	{
+		"document": "Hey! So we match and u dissappear :p",
+		"category": "picture"
+	},
+	{
+		"document": "You look stunning",
+		"category": "picture"
+	},
+	{
+		"document": "One picture and looking like a model probably a little too good to be true",
+		"category": "picture"
+	},
+	{
+		"document": "Stunning dress Jenna!",
+		"category": "picture"
+	},
+
+	{
+		"document": "That smouldering look of yours lit a forest fire in me baby",
+		"category": "picture"
+	},	
+	{
+		"document": "You are looking really Elegant and lovely",
+		"category": "picture"
+	},
+	{
+		"document": "Hot pic Jenna x",
+		"category": "picture"
+	},
+	{
+		"document": "Hi Jenna love your PIC how are you",
+		"category": "picture"
+	},
+	{
+		"document": "Holy crap that's a hot photo",
+		"category": "picture"
+	},
+	{
+		"document": "I think you look sensational,",
+		"category": "picture"
+	},
+	{
+		"document": "Looking hot ;)",
+		"category": "picture"
+	},
+	{
+		"document": "It's hard for me to believe that's you in your pic haha",
+		"category": "picture"
+	},	
+
+	{
+		"document": "You're cute as a button!",
+		"category": "picture"
+	},
+	{
+		"document": "There's no way this is a legit profile?!",
+		"category": "picture"
+	},
+	{
+		"document": "wow that's a hot photo",
+		"category": "picture"
+	},
+	{
+		"document": "What a lovely bathing suit X",
+		"category": "picture"
+	},
+	{
+		"document": "you're really hot",
+		"category": "picture"
+	},
+	{
+		"document": "you're really sexy",
+		"category": "picture"
+	},	
+	{
+		"document": "you look hot",
+		"category": "picture"
+	},		
+	{
+		"document": "you're look cute",
+		"category": "picture"
+	},		
+
+	{
+		"document": "You about sometime soon for a get together?",
+		"category": "meetup"
+	},		
+	{
+		"document": "Want to meet this week?",
+		"category": "meetup"
+	},		
+	{
+		"document": "Are you free tonight to party ?",
+		"category": "meetup"
+	},		
+	{
+		"document": "i would love to become further acquainted with you over a drink wanna chat",
+		"category": "meetup"
+	},		
+	{
+		"document": "We should go for drinks sometime",
+		"category": "meetup"
+	},	
+
+	{
+		"document": "You are a girl of few words.....is it worth continuing this?",
+		"category": "noanswer"
+	},
+	{
+		"document": "Jenna I'm not impressed by your social skills for now...",
+		"category": "noanswer"
+	},		
+
+
+	{
+		"document": "I'm slightly dubious however",
+		"category": "doubt"
+	},		
+	{
+		"document": "Are u real??",
+		"category": "doubt"
+	},	
+	{
+		"document": "Fake?",
+		"category": "doubt"
+	},		
+	{
+		"document": "if only you were real",
+		"category": "doubt"
+	},			
+	{
+		"document": "I'm confused",
+		"category": "doubt"
+	},		
+	{
+		"document": "One picture and looking like a model probably a little too good to be true",
+		"category": "doubt"
+	},	
+	{
+		"document": "Stunning dress Jenna! Just one picture though? Sounds dubious. Is that really you",
+		"category": "doubt"
+	},		
+	{
+		"document": "You're not a bot are you..?",
+		"category": "doubt"
+	},	
+	{
+		"document": "Ur not a bot are u?",
+		"category": "doubt"
+	},		
+	{
+		"document": "And your real body?",
+		"category": "doubt"
+	},	
+	{
+		"document": "Is your body a manikin?",
+		"category": "doubt"
+	},		
+	{
+		"document": "Ur not a bot are u?",
+		"category": "doubt"
+	},			
+	{
+		"document": "Fake",
+		"category": "doubt"
+	},		
+	{
+		"document": "There's no way this is a legit profile?!",
+		"category": "doubt"
+	},	
+	{
+		"document": "It's hard for me to believe that's you in your pic haha",
+		"category": "doubt"
+	},		
+	{
+		"document": "This profile fake much?",
+		"category": "doubt"
+	},	
+
+
+	{
+		"document": "Or have a porn website you are trying to advertise to me?",
+		"category": "doubt"
+	},		
+	{
+		"document": "There seems to be a few fake profiles out on here soliciting their services",
+		"category": "doubt"
+	},			
+	{
+		"document": "is this fake?",
+		"category": "doubt"
+	},		
+	{
+		"document": "are you a fake?",
+		"category": "doubt"
+	},	
+
+
+	{
+		"document": "Hi Jenn, happy weekend ?",
+		"category": "weekend"
+	},		
+	{
+		"document": "Hola! Good weekend?",
+		"category": "weekend"
+	},	
+	{
+		"document": "Hey Jenna, How's your weekend going?",
+		"category": "weekend"
+	},	
+	{
+		"document": "I hope you're having a good weekend Jenna. I'm on my way home from a dinner dance.",
+		"category": "weekend"
+	},	
+	{
+		"document": "Hi Jenna. How's your weekend so far?",
+		"category": "weekend"
+	},							
+		{
+		"document": "Hey Jenna, hows your sunday going?",
+		"category": "weekend"
+	},	
+
+
+	{
+		"document": "Any plan for the weekend?",
+		"category": "weekendplan"
+	},	
+	{
+		"document": "Hi Jenna How are you? What is your plan for a weekend?",
+		"category": "weekendplan"
+	},	
+	{
+		"document": "Have you got anything exciting planned this weekend?",
+		"category": "weekendplan"
+	},	
+	{
+		"document": "enjoying the sun this Saturday somewhere nice?",
+		"category": "weekendplan"
+	},	
+	{
+		"document": "any plan for this weekend?",
+		"category": "weekendplan"
+	},	
+	{
+		"document": "Have you got anything exciting planned this weekend ?",
+		"category": "weekendplan"
+	},	
+	{
+		"document": "What is your plan for a weekend ?",
+		"category": "weekendplan"
+	},							
+		{
+		"document": "any plan for this weekend?",
+		"category": "weekendplan"
+	},	
+
+
+	{
+		"document": "Are you a London girl?",
+		"category": "location"
+	},	
+	{
+		"document": "hey where you from x",
+		"category": "location"
+	},	
+	{
+		"document": "Not much, what're you up to?",
+		"category": "location"
+	},	
+	{
+		"document": "where you from?",
+		"category": "location"
+	},	
+	{
+		"document": "Are you having fun on here yet? X",
+		"category": "location"
+	},	
+	{
+		"document": "Are you from London?",
+		"category": "location"
+	},	
+	{
+		"document": "At where are you based?",
+		"category": "location"
+	},	
+
+
+	{
+		"document": "Sorry went to sleep after my message, just saw yours",
+		"category": "sorry"
+	},	
+
+
+	{
+		"document": "What you up to?",
+		"category": "whatareyoudoing"
+	},			
+	{
+		"document": "what're you up to?",
+		"category": "whatareyoudoing"
+	},				
+
+
+
+	{
+		"document": "Hope you like tall men... I'm 6'4",
+		"category": "mansappearance"
+	},			
+	{
+		"document": "I no I'm good looking Jenna but I must be a little old for you 😆",
+		"category": "mansappearance"
+	},
+
+	{
+		"document": "I no I'm good looking Jenna but I must be a little old for you 😆",
+		"category": "whatiamdoing"
+	},	
+
+
+	{
+		"document": "I think I've fallen in love with you",
+		"category": "love"
 	}
 ]
