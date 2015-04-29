@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title Data
+	script(src='/lib/jquery-2.1.3.min.js')
+	script(src="/lib/firebase.js")
+	script(src="/javascript/data-input.js")
+	script(src='//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js')
+	link(rel='stylesheet/css' ref='//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css')
+body
+	div
+		h1 Training data input
+		p
+			form
+				p
+					| Phrase: 
+					input(type='text' name='phrase' class="phrase" size='75')
+				p
+					| Category: 
+					select(name='category' class='phrase-category')
+				p
+					input(type='submit' class="add-phrase" name='addPhrase' value='Add phrase')
+
+
+		h1 Replies input
+		p
+			form
+				p
+					| Category: 
+					select(name='category' class='reply-category')
+
+				p
+					| Character: 
+					select(name='category' class='character')
+						option(value='princess') Princess
+						option(value='feminist') Sexy
+						option(value='sexy') Sexy
+				p
+					| Reply: 
+					input(type='text' name='reply' size='75')
+
+				p
+					input(type='submit' class="add-reply" name='addReply' value='Add reply')

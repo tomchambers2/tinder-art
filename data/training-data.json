@@ -16,6 +16,10 @@
 		"category": "hello"
 	},
 	{
+		"document": "Helloooooo",
+		"category": "hello"
+	},	
+	{
 		"document": "hey x",
 		"category": "hello"
 	},		
@@ -105,6 +109,10 @@
 	},	
 	{
 		"document": "evening",
+		"category": "hello"
+	},
+	{
+		"document": "Hi Jenna",
 		"category": "hello"
 	},
 	{

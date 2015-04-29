@@ -6,6 +6,7 @@ var setPartner = require('./handlers/socket/set-partner')
 var refreshPartner = require('./handlers/socket/refresh-partner')
 var sendMessage = require('./handlers/socket/send-message')
 var onDisconnect = require('./handlers/socket/on-disconnect')
+var categorise = require('./handlers/socket/categorise')
 
 module.exports = function(io) {
 	io.use(socketAuth.attachCredentials)
@@ -15,7 +16,9 @@ module.exports = function(io) {
 
 		socket.emit('request partner')
 
-		getUpdates.bind(socket)()
+		socket.on('categorise', categorise)
+
+		socket.on('get updates', getUpdates)
 
 	  	socket.on('set partner', setPartner)
 

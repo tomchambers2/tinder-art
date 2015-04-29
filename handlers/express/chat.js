@@ -30,5 +30,5 @@ module.exports = function chatController(req, res) {
  //     name: 'Jonathan',
  //     ping_time: '2015-04-18T16:16:45.246Z',
  //     photos: [ [Object], [Object] ] } }
-	res.render('chat', { partner: req.partner })
+	res.render('chat', { partner: req.partner, messages: JSON.stringify(req.partner.messages) })
 }	

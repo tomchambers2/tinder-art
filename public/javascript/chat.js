@@ -73,9 +73,12 @@ $(document).ready(function() {
     console.log('setting new partner',data);
     $('.partner-name').text(data.name)
     $('.chat-screen').html('')
-    data.messages.forEach(function(messageObj) {
-      addMessage({ user: 'remote', message: messageObj.message })
+    data.messages.forEach(function(messageObj, i) {
+      var type = (messageObj.from === data.partnerId) ? 'remote' : 'user';
+      var push = (i === data.messages.length - 1) ? true : false;
+      addMessage({ user: type, message: messageObj.message }, push)
     })
+    socket.emit('categorise', _.last(data.messages).message)
     var timer = new Timer()
     timer.start(function() {
       refreshPartner()
@@ -83,6 +86,7 @@ $(document).ready(function() {
   })
 
   socket.on('chat message',  function(chat) {
+    console.log('Received a new message',chat);
     if (chat.type==='remote') {
       var timer = new Timer()
       timer.start(function() {
@@ -91,6 +95,13 @@ $(document).ready(function() {
     }
   	addMessage(chat)
   })
+
+  var messages = _.filter(data.messages, function(message) {
+    return message.from === data.partnerId
+  })
+
+  console.log('will cat',_.last(messages).message);
+  socket.emit('categorise', _.last(messages).message)
 
   socket.on('phrases', function(phrases) {
     console.log('new phrases are:',phrases);
@@ -128,10 +139,11 @@ $(document).ready(function() {
     addMessage({ type: 'user', message: $(this).text() })
   }
 
-  function addMessage(chat) {
+  function addMessage(chat, dontPush) {
     var side = chat.type === 'user' ? 'right' : 'left'
     var icon = chat.type === 'user' ? userIcon : ''
     $('.chat-screen').append('<div class="row"><div class="col-xs-10"><div class="message triangle-isosceles '+side+'">'+chat.message+"</div></div>"+icon+'</div>')  	
+    if (dontPush) return
     scrollBottom()
   }
 
@@ -148,4 +160,12 @@ $(document).ready(function() {
   function refreshPartner() {
     socket.emit('refresh partner')
   }
+
+  function getUpdates() {
+    var timer = setTimeout(function() {
+      socket.emit('get updates', lastUpdate)
+      getUpdates()
+    }, 5000)
+  }
+  getUpdates()
 })

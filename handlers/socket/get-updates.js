@@ -5,41 +5,25 @@ var _ = require('lodash')
 var categorise = require('../../lib/categorise')
 var phraseFinder = require('../../lib/phrase-finder')
 
-module.exports = function() {
-	var count = 0
+module.exports = function(lastUpdate) {
 	var tinder = new Tinder(this.facebookUser.userId, this.facebookUser.token)
 	var self = this
-	this.lastUpdate = Date.now()
-    function getUpdates(matchId, partnerId, lastUpdate, callback) {
-    	if (!matchId || !partnerId) {
-    		console.log('Client has not set match/partner yet')
-    		return setTimeout(function() { getUpdates(self.matchId, self.partnerId, self.lastUpdate, updateCallback) }, 5000)
-    	}
 
-		count++
-        if (!self.connected) {
-            console.log('User has disconnected, cancelling update closure');
-            return;
-        }
-        console.log(count+': Checking for new messages')
-        tinder.getUpdatesForMatch(matchId, partnerId, lastUpdate, function(err, messages) {
-            if (err) callback(err)
-            callback(null, messages)
-        })
-    }	
+	if (!matchId || !partnerId) {
+		console.error('Client has not set match/partner yet')
+	}
 
-	function updateCallback(err, messages) {
+    console.log('Checking for new messages')
+    tinder.getUpdatesForMatch(this.matchId, this.partnerId, lastUpdate, function updateCallback(err, messages) {
+    	if (err) callback(err)
 		self.lastUpdate = Date.now()
 		_.forEach(messages, function(message) {
 			self.emit('chat message', { type: 'remote', message: message })
 		})
 
-		var phrases = phraseFinder(categorise(_.last(messages)))
-		//var phrases = phraseFinder("hello")
-		self.emit('phrases', phrases)
-
-		setTimeout(function() { getUpdates(self.matchId, self.partnerId, self.lastUpdate, updateCallback) }, 5000)	  	
-	}
-
-	getUpdates(this.matchId, this.partnerId, this.lastUpdate, updateCallback)	
+		if (_.last(messages)) {
+			var phrases = phraseFinder(categorise(_.last(messages)))
+			self.emit('phrases', phrases)
+		}
+    })
 }
