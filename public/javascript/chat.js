@@ -104,9 +104,9 @@ $(document).ready(function() {
   socket.emit('categorise', _.last(messages).message)
 
   socket.on('phrases', function(phrases) {
-    console.log('new phrases are:',phrases);
+    console.log('new phrases are:',phrases)
     $('.phrase').each(function(index) {
-      console.log($(this),index,phrases[index]);
+      console.log($(this),index,phrases[index])
       $(this).text(phrases[index])
     })
   })
