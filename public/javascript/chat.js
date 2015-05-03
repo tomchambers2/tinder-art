@@ -1,6 +1,6 @@
 var userIcon = '<div class="col-xs-2"><div class="user-icon"></div></div>'
 
-var REFRESH_TIMER = 120
+var REFRESH_TIMER = 60
 var FRAME_RATE = 60
 var timerInnerOffset = 0
 var TIMER_CACHE = []
