@@ -21,7 +21,7 @@ html
                 .col-md-3
                     h2 Reply rate
                 .col-md-3
-                    h2 Profile created  
+                    h2 First match (&lt;24 hours)
                 .col-md-3
                     h2 Blocks           
             .row.text-center
@@ -52,9 +52,10 @@ html
                             td(nowrap) Last activity
                             td(nowrap) Status
                             td Messages
+                            td Make active
                             td Remove
                         for match in matches
-                            tr(data-user-id='#{match._id}')
+                            tr(data-user-id='#{match._id}').match
                                 td(nowrap)=truncate(match._id)
                                 td(nowrap)=match.person.name
                                 td(nowrap)=timeSince(match.created_date)
@@ -69,6 +70,10 @@ html
                                     ul
                                         for message in match.messages
                                             li=message.message  
+                                td
+                                    if !match.active
+                                        button.btn.btn-primary.activate-user(data-user-id='#{match._id}' data-loading-text='Activating...').
+                                            Activate                                            
                                 td
                                     if !match.dead
                                         button.btn.btn-primary.remove-user(data-user-id='#{match._id}' data-loading-text='Removing...').

@@ -4,6 +4,7 @@ var dashboardHandler = require('./handlers/express/dashboard')
 var generateMatchesHandler = require('./handlers/express/generate-matches')
 var loginHandler = require('./handlers/express/login')
 var killUserHandler = require('./handlers/express/kill-user')
+var activateUserHandler = require('./handlers/express/activate-user')
 var facebookAuthHandler = require('./handlers/express/facebook-auth')
 
 var logger = require('./middleware/logger')
@@ -15,6 +16,7 @@ var generateStats = require('./middleware/generate-stats')
 var generateMatches = require('./middleware/generate-matches')
 var dirtyFacebookAuth = require('./middleware/dirty-facebook-auth')
 var killUser = require('./middleware/kill-user')
+var activateUser = require('./middleware/activate-user')
 
 module.exports = function(app) {
 	app.get('/dashboard', logger, dirtyFacebookAuth, getMatches, getBlocks, generateStats, dashboardHandler)	
@@ -26,6 +28,8 @@ module.exports = function(app) {
 	app.get('/api/generate-matches', logger, dirtyFacebookAuth, generateMatches, generateMatchesHandler)
 
 	app.get('/api/kill-user/:userId', logger, dirtyFacebookAuth, killUser, killUserHandler)
+
+	app.get('/api/activate-user/:userId', logger, activateUser, activateUserHandler)
 
 	app.get('/test-chat', logger, dirtyFacebookAuth, getChatPartner, testChatHandler)
 

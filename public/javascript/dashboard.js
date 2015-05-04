@@ -25,6 +25,27 @@ $(document).ready(function() {
 		})
 	})
 
+	$('.activate-user').click(function(e) {
+		var activate = this
+		$(this).button('loading') 
+		console.log('did click on user');
+		var userId = $(this).data('user-id')
+		$.get('/api/activate-user/'+userId, function(data) {
+			$(activate).button('reset')
+
+			$('.match status active-user').addClass('dead')
+			$('.match status active-user').removeClass('active-user')
+
+			console.log('returned from activate',data);
+			if (data.success) {
+				$('*[data-user-id="'+userId+'"] .status').removeClass('unused')
+				$('*[data-user-id="'+userId+'"] .status').removeClass('dead')
+				$('*[data-user-id="'+userId+'"] .status').addClass('active-user')
+			}
+			$(activate).hide()
+		})
+	})	
+
 
 	$('.generate-matches').click(function(e) {
 		$(this).button('loading')

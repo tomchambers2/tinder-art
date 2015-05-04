@@ -1,5 +1,7 @@
 'use strict'
 
+var emitter = require('./lib/eventemitter')
+
 var socketAuth = require('./handlers/socket/socket-auth')
 var getUpdates = require('./handlers/socket/get-updates')
 var setPartner = require('./handlers/socket/set-partner')
@@ -7,6 +9,7 @@ var refreshPartner = require('./handlers/socket/refresh-partner')
 var sendMessage = require('./handlers/socket/send-message')
 var onDisconnect = require('./handlers/socket/on-disconnect')
 var categorise = require('./handlers/socket/categorise')
+var assignPartner = require('./handlers/socket/assign-partner')
 
 module.exports = function(io) {
 	io.use(socketAuth.attachCredentials)
@@ -22,6 +25,8 @@ module.exports = function(io) {
 
 	  	socket.on('set partner', setPartner)
 
+		emitter.on('activate user', assignPartner.bind(socket))
+		
 	  	socket.on('refresh partner', refreshPartner)
 
 		socket.on('send message', sendMessage)

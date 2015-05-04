@@ -5,7 +5,15 @@ var FRAME_RATE = 60
 var timerInnerOffset = 0
 var TIMER_CACHE = []
 
+var defaultPhrases = [
+	'Hi',
+	'Hello',
+	'Hey there'
+]
+
 $(document).ready(function() {
+  setDefaultPhrases()
+
   var timerHeight = $('.timer').height()
   var increment = timerHeight / (REFRESH_TIMER * FRAME_RATE)
 
@@ -69,16 +77,28 @@ $(document).ready(function() {
     socket.emit('set partner', data)
   })
 
+  function setDefaultPhrases() {
+	$('.phrase').each(function(index) {
+      $(this).text(defaultPhrases[index])
+    })  	
+  }
+
   socket.on('new partner', function(data) {
+    console.log('new p dat',data);
+  	setDefaultPhrases()
+
     console.log('setting new partner',data);
     $('.partner-name').text(data.name)
     $('.chat-screen').html('')
     data.messages.forEach(function(messageObj, i) {
       var type = (messageObj.from === data.partnerId) ? 'remote' : 'user';
+      console.log('message typ remote?',type);
       var push = (i === data.messages.length - 1) ? true : false;
-      addMessage({ user: type, message: messageObj.message }, push)
+      addMessage({ type: type, message: messageObj.message }, push)
     })
-    socket.emit('categorise', _.last(data.messages).message)
+    if (data.messages.length) {
+    	socket.emit('categorise', _.last(data.messages).message)
+    }
     var timer = new Timer()
     timer.start(function() {
       refreshPartner()
@@ -100,13 +120,17 @@ $(document).ready(function() {
     return message.from === data.partnerId
   })
 
-  console.log('will cat',_.last(messages).message);
-  socket.emit('categorise', _.last(messages).message)
+  if (messages.length) {
+  	setCategory(messages)
+  }
+
+  function setCategory(messages) {
+  	console.log('will cat',_.last(messages).message);
+  	socket.emit('categorise', _.last(messages).message)  	
+  }
 
   socket.on('phrases', function(phrases) {
-    console.log('new phrases are:',phrases)
     $('.phrase').each(function(index) {
-      console.log($(this),index,phrases[index])
       $(this).text(phrases[index])
     })
   })
@@ -140,6 +164,7 @@ $(document).ready(function() {
   }
 
   function addMessage(chat, dontPush) {
+  	console.log('adding',chat.message,'with type',chat.type);
     var side = chat.type === 'user' ? 'right' : 'left'
     var icon = chat.type === 'user' ? userIcon : ''
     $('.chat-screen').append('<div class="row"><div class="col-xs-10"><div class="message triangle-isosceles '+side+'">'+chat.message+"</div></div>"+icon+'</div>')  	
@@ -163,7 +188,7 @@ $(document).ready(function() {
 
   function getUpdates() {
     var timer = setTimeout(function() {
-      socket.emit('get updates', lastUpdate)
+      socket.emit('get updates', data.lastUpdate)
       getUpdates()
     }, 5000)
   }
