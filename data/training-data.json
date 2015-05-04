@@ -1,12 +1,25 @@
 [
 	{
-		"document": "some text",
-		"category": "example"
+		"document": "Hi jenna",
+		"category": "hello"
 	},
 	{
-		"document": "some text",
-		"category": "example"
+		"document": "Hello Jenna",
+		"category": "hello"
 	},
+	{
+		"document": "Helloooooo",
+		"category": "hello"
+	},
+	{
+		"document": "Hi there",
+		"category": "hello"
+	},
+	{
+		"document": "Hi Jenna, thanks for the Swipe!",
+		"category": "hello"
+	},
+
 	{
 		"document": "hi",
 		"category": "hello"
@@ -117,10 +130,6 @@
 	},
 	{
 		"document": "hi how are you?",
-		"category": "howareyou"
-	},	
-	{
-		"document": "hi there",
 		"category": "howareyou"
 	},		
 	{
@@ -472,10 +481,34 @@
 	{
 		"document": "We should go for drinks sometime",
 		"category": "meetup"
-	},	
+	},
 
 	{
+		"document": "Want to go?",
+		"category": "meetup"
+	},
+	{
+		"document": "Want to meet this week?",
+		"category": "meetup"
+	},
+	{
+		"document": "Do you want to meet?",
+		"category": "meetup"
+	},
+	{
 		"document": "You are a girl of few words.....is it worth continuing this?",
+		"category": "noanswer"
+	},
+	{
+		"document": "Let’s meet up for drinking",
+		"category": "meetup"
+	},
+	{
+		"document": "Any conversation?",
+		"category": "noanswer"
+	},
+	{
+		"document": "Your not much of a talker :p",
 		"category": "noanswer"
 	},
 	{
@@ -492,6 +525,33 @@
 		"document": "Are u real??",
 		"category": "doubt"
 	},	
+
+
+	{
+		"document": "Is this a  fake escort profile?",
+		"category": "doubt"
+	},
+	{
+		"document": "Are you a real person looking to meet people or An escort in tinder?",
+		"category": "doubt"
+	},
+	{
+		"document": "There seems to be a few fake profiles out on here soliciting their services",
+		"category": "doubt"
+	},
+	{
+		"document": "Are you an escort?",
+		"category": "doubt"
+	},
+	{
+		"document": "Or have a porn website you are trying to advertise to me?",
+		"category": "doubt"
+	},
+	{
+		"document": "This profile fake much?",
+		"category": "doubt"
+	},
+
 	{
 		"document": "Fake?",
 		"category": "doubt"
@@ -599,6 +659,10 @@
 		"category": "weekendplan"
 	},	
 	{
+		"document": "And what are you up to tonight?",
+		"category": "weekendplan"
+	},
+	{
 		"document": "Hi Jenna How are you? What is your plan for a weekend?",
 		"category": "weekendplan"
 	},	
@@ -632,6 +696,21 @@
 		"document": "Are you a London girl?",
 		"category": "location"
 	},	
+
+
+	{
+		"document": "I'm in Berlin for the first time. Are you from Berlin?",
+		"category": "location"
+	},
+	{
+		"document": "London? Xx",
+		"category": "location"
+	},
+	{
+		"document": "Where are you from?",
+		"category": "location"
+	},
+
 	{
 		"document": "hey where you from x",
 		"category": "location"
@@ -674,6 +753,19 @@
 	},				
 
 
+	{
+		"document": "I wrote the book",
+		"category": "whatiamdoing"
+	},
+	{
+		"document": "I get that always",
+		"category": "whatiamdoing"
+	},
+	{
+		"document": "I'm in financial services. Even more irresistible right?",
+		"category": "whatiamdoing"
+	},
+
 
 	{
 		"document": "Hope you like tall men... I'm 6'4",
@@ -693,5 +785,143 @@
 	{
 		"document": "I think I've fallen in love with you",
 		"category": "love"
+	},
+
+	{
+		"document": "Hi Jenna love your PIC how are you",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hi nice pic , how's the dating going on here x",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hey, how are you? Having a nice week so far?",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hey how are you babe",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hey, looking for a great night?",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hey you alright? X",
+		"category": "howareyou"
+	},
+	{
+		"document": "How's it going?",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hey how're you?",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hows ur evening going?",
+		"category": "howareyou"
+	},
+	{
+		"document": "U alright?",
+		"category": "howareyou"
+	},
+
+
+	{
+		"document": "Wowsers you're absolutely gorgeous! Xx",
+		"category": "picture"
+	},
+	{
+		"document": "That can't really be you in that picture surely?!!",
+		"category": "picture"
+	},
+	{
+		"document": "This can't be real right?",
+		"category": "picture"
+	},
+	{
+		"document": "what's a beautiful girl like you doing spending her Fri on Tinder....",
+		"category": "picture"
+	},
+	{
+		"document": "Can I not compliment you on your looks?",
+		"category": "picture"
+	},
+	{
+		"document": "I did not see that coming",
+		"category": "picture"
+	},
+	{
+		"document": "Strike of luck perhaps",
+		"category": "picture"
+	},
+
+	{
+		"document": "Now Jenna, what brings a lovely girl like you to Tinder and what do you seek in these parts?",
+		"category": "whatbring"
+	},
+	{
+		"document": "What brings you to tinder?",
+		"category": "whatbring"
+	},
+	{
+		"document": "Come here often?",
+		"category": "whatbring"
+	},
+	{
+		"document": "What you’re looking for I guess? ",
+		"category": "whatbring"
+	},
+	{
+		"document": "What are you looking for Tinder?",
+		"category": "whatbring"
+	},
+
+
+	{
+		"document": "What’s your deal",
+		"category": "whatsyourdeal"
+	},
+	{
+		"document": "What brings you to tinder?",
+		"category": "whatbring"
+	},
+	{
+		"document": "Have you been drinking?",
+		"category": "whatsyourdeal"
+	},
+	{
+		"document": "Magical ey?",
+		"category": "whatsyourdeal"
+	},
+
+
+	{
+		"document": "that's makes no sense to me",
+		"category": "makesnosense"
+	},
+	{
+		"document": "Lol this is true",
+		"category": "makesnosense"
+	},
+	{
+		"document": "Me romantic?? Lol how did you come across that conclusion",
+		"category": "makesnosense"
+	},
+	{
+		"document": "I remember that too. We have unfinished business.",
+		"category": "makesnosense"
+	},
+	{
+		"document": "Hahaha no one said it was",
+		"category": "makesnosense"
+	},
+
+	{
+		"document": "So, you're working/studying in london then?",
+		"category": "workingstudying"
 	}
+
 ]
