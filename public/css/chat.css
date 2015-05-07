@@ -143,6 +143,7 @@ i.fat {
 }
 
 .message {
+	font-size: 24px;
 	width: 92%;
 	float: left;
 }

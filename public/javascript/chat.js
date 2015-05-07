@@ -78,13 +78,13 @@ $(document).ready(function() {
   })
 
   function setDefaultPhrases() {
-	$('.phrase').each(function(index) {
+    resetPhrases()
+	  $('.phrase').each(function(index) {
       $(this).text(defaultPhrases[index])
     })  	
   }
 
   socket.on('new partner', function(data) {
-    console.log('new p dat',data);
   	setDefaultPhrases()
 
     console.log('setting new partner',data);
@@ -130,6 +130,7 @@ $(document).ready(function() {
   }
 
   socket.on('phrases', function(phrases) {
+    resetPhrases()
     $('.phrase').each(function(index) {
       $(this).text(phrases[index])
     })
@@ -149,21 +150,27 @@ $(document).ready(function() {
     addMessage({ type: 'user', message: $('.user-input').val() })
     flushInput($('.user-input'))
   }  
-  /* only here for test-chat */
 
   $('.phrase').click(onSubmitMessage)
 
   function slideAwayPhrases(selectedCharacter) {
-    $('.phrase-container').toggle('slide')
-
-    // $('.phrase').each(function(index, phrase) {
-    //   if ($(this).data('character') === selectedCharacter) return
-    //   $('.'+$(this).data('character')).animate({"margin-left": '+=1000'})
-    // })
+    $('.phrase').each(function(index, phrase) {
+      if ($(this).data('character') === selectedCharacter) return
+      $('.'+$(this).data('character')+'-container').hide('slide', { direction: 'right' }, 800)
+    })
   }
 
   function removePhrase(selectedCharacter) {
-    $('.'+selectedCharacter).hide()
+    $('.'+selectedCharacter).fadeOut(800, function() {
+          $(this).css({"visibility":"hidden"});
+          $(this).css({"display":"block"});
+    });    
+  }
+
+  function resetPhrases() {
+    $('.phrase').each(function(i, phrase) {
+      $(this).show()
+    })
   }
 
   function onSubmitMessage() {  
@@ -190,8 +197,6 @@ $(document).ready(function() {
     if (dontPush) return
     scrollBottom()
   }
-
-  //addMessage({ type: 'user', message: 'blah' })
 
   function sendMessage(message) {
   	socket.emit('send message', message)
