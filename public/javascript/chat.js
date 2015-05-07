@@ -5,13 +5,16 @@ var FRAME_RATE = 60
 var timerInnerOffset = 0
 var TIMER_CACHE = []
 
+
 var defaultPhrases = [
-	'Hi',
-	'Hi',
-	'Hi'
+  'Hi',
+  'Hi',
+  'Hi'
 ]
 
 $(document).ready(function() {
+  var currentUser = data
+  
   setDefaultPhrases()
 
   var timerHeight = $('.timer').height()
@@ -90,6 +93,7 @@ $(document).ready(function() {
     console.log('setting new partner',data);
     $('.partner-name').text(data.name)
     $('.chat-screen').html('')
+    currentUser.photoUrl = data.person.photos[0].url
     data.messages.forEach(function(messageObj, i) {
       var type = (messageObj.from === data.partnerId) ? 'remote' : 'user';
       console.log('message typ remote?',type);
@@ -180,7 +184,7 @@ $(document).ready(function() {
       return
     }
 
-  	//sendMessage($(this).text())
+  	sendMessage($(this).text())
 
     removePhrase($(this).data('character'))
     slideAwayPhrases($(this).data('character'))
@@ -189,11 +193,11 @@ $(document).ready(function() {
   }
 
   function addMessage(chat, dontPush) {
-  	console.log('adding',chat.message,'with type',chat.type);
+    console.log('adding',chat.message,'with type',chat.type);
+    var remoteIcon = '<img class="man-face" src="'+currentUser.photoUrl+'">'
     var side = chat.type === 'user' ? 'right' : 'left'
-    var icon = chat.type === 'user' ? userIcon : ''
-    var icon = ''
-    $('.chat-screen').append('<div class="row"><div class="col-xs-10"><div class="message triangle-isosceles '+side+'">'+chat.message+"</div></div>"+icon+'</div>')  	
+    var icon = chat.type === 'user' ? '' : remoteIcon
+    $('.chat-screen').append('<div class="row"><div class="col-xs-2">'+icon+'</div><div class="col-xs-10"><div class="message triangle-isosceles '+side+'">'+chat.message+"</div></div></div>")  	
     if (dontPush) return
     scrollBottom()
   }
