@@ -7,8 +7,8 @@ var TIMER_CACHE = []
 
 var defaultPhrases = [
 	'Hi',
-	'Hello',
-	'Hey there'
+	'Hi',
+	'Hi'
 ]
 
 $(document).ready(function() {
@@ -153,13 +153,31 @@ $(document).ready(function() {
 
   $('.phrase').click(onSubmitMessage)
 
+  function slideAwayPhrases(selectedCharacter) {
+    $('.phrase-container').toggle('slide')
+
+    // $('.phrase').each(function(index, phrase) {
+    //   if ($(this).data('character') === selectedCharacter) return
+    //   $('.'+$(this).data('character')).animate({"margin-left": '+=1000'})
+    // })
+  }
+
+  function removePhrase(selectedCharacter) {
+    $('.'+selectedCharacter).hide()
+  }
+
   function onSubmitMessage() {  
-  console.log('sending a message',$(this).text());  
+    //console.log('sending a message',$(this).text());  
     if (!$(this).text()) {
       console.log("User attempted to send a blank message")
       return
     }
-  	sendMessage($(this).text())
+
+  	//sendMessage($(this).text())
+
+    removePhrase($(this).data('character'))
+    slideAwayPhrases($(this).data('character'))
+
     addMessage({ type: 'user', message: $(this).text() })
   }
 
@@ -167,6 +185,7 @@ $(document).ready(function() {
   	console.log('adding',chat.message,'with type',chat.type);
     var side = chat.type === 'user' ? 'right' : 'left'
     var icon = chat.type === 'user' ? userIcon : ''
+    var icon = ''
     $('.chat-screen').append('<div class="row"><div class="col-xs-10"><div class="message triangle-isosceles '+side+'">'+chat.message+"</div></div>"+icon+'</div>')  	
     if (dontPush) return
     scrollBottom()

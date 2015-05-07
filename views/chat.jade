@@ -5,14 +5,17 @@ html
         script(src='/lib/jquery-2.1.3.min.js')
         script(src='/socket.io/socket.io.js')
         link(href='/lib/bootstrap/3.3.4/css/bootstrap.min.css' rel='stylesheet')
+        link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")          
         script(src='/lib/bootstrap/3.3.4/js/bootstrap.min.js')
         title Chat!
         script(src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.7.0/lodash.min.js')
         script(src='/javascript/chat.js')
         link(rel='stylesheet' href='/css/chat.css')
+        link(rel='stylesheet' href='/css/fonts.css')
         link(rel='stylesheet' href='/css/bubbles.css')
         script(src='/lib/mousetrap.min.js')
         script(src='/javascript/keyboard-shortcuts.js')
+        script(src="//code.jquery.com/ui/1.11.4/jquery-ui.js")
     body
         script.
             var data = {
@@ -24,41 +27,67 @@ html
 
         .header
             .row
-                .col-md-8.col-sm-offset-2.text-center
+                .col-xs-2.text-center
+                    h1
+                        i.fa.fa-arrow-left.fat
+                .col-xs-8.text-center
                         h1.
-                            Generic dating app - connected to <span class="partner-name">#{partner.person.name}</span>
-                .col-md-2
-                    .timer
-                        .flashing
-                        .inner
+                            <img class="man-face" src="#{partner.person.photos[0].url}"> <span class="partner-name">#{partner.person.name}</span>
+                .col-xs-2.text-center
+                    h1
+                        i.fa.fa-ellipsis-h.fat
     
         .chat-screen                      
             for item in partner.messages   
                 if item.from == partner.person._id
-                    .row
-                        .col-md-12
+                    .row.message
+                        .col-xs-2
+                            |<img class="man-face" src="#{partner.person.photos[0].url}">
+                        .col-xs-10
                             .message.triangle-isosceles.left.
                                 #{item.message}
                 else
-                    .row
-                        .col-md-10
+                    .row.message
+                        .col-xs-10
                             .message.triangle-isosceles.right.
                                 #{item.message}
 
+            .phrase-container.text-center
+                .row.phrases
+                    .col-xs-12
+                        .row
+                            .col-xs-10.princess
+                                .triangle-isosceles.right.phrase.princess(data-character='princess').
+                                    Good day sir
+                            .col-xs-2.text-left
+                                .character.princess
+                    .col-xs-12
+                        .row
+                            .col-xs-10.sexy
+                                .triangle-isosceles.right.phrase.sexy(data-character='sexy').
+                                    Good day sir
+                            .col-xs-2.text-left
+                                .character.sexy
+                    .col-xs-12
+                        .row
+                            .col-xs-10.feminist
+                                .triangle-isosceles.right.phrase.feminist(data-character='feminist').
+                                    Good day sir
+                            .col-xs-2.text-left
+                                .character.feminist
         .input-bar
-            .row.phrases
-                .col-md-4.btn.phrase.text-center.
-                    Good day sir
-                .col-md-4.btn.phrase.text-center.
-                    What's up
-                .col-md-4.btn.phrase.text-center.
-                    Hey...
+            .row
+                .col-xs-12
+                    .send-message
+                        input.user-input(type='text' autofocus placeholder='Message').form-control
+                        input.submit(type='submit' value='Send').btn.btn-send
+
         .error
             h1 Lost connection to server!
             h2 Messages will be queued and sent on reconnection
 
         .debug.hidden
-            div(class='col-md-12')
+            div(class='col-xs-12')
                 h1 Chatting with #{partner.person.name}
                 div
                     p=partner._id

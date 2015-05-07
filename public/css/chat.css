@@ -5,11 +5,25 @@ html, body {
 	font-family: sans-serif;
 }
 
+i.fat {
+	font-size: 30px;
+	color: #D24F3B;
+}
+
+.man-face {
+	width: 65px;
+	height: 65px;
+	border-radius: 9999px;
+	margin-right: 20px;
+}
+
+.message {
+	margin-top: 15px;
+}
+
 .header {
-	height: 15%;
-	border-bottom: 5px solid #eee;
-	background: #36508D;
-	color: #eee;
+	height: 100px;
+	border-bottom: 1px solid #eee;
 }
 
 .hidden {
@@ -17,7 +31,7 @@ html, body {
 }
 
 .chat-screen {
-	height: 70%;
+	height: calc(100% - 200px);
 	width: 80%;
 	margin: auto;
 	overflow-y: scroll;
@@ -30,8 +44,14 @@ html, body {
 
 .input-bar {
 	border-top: 5px solid #eee;
-	height: 15%;
-	background: #36508D;
+	height: 100px;
+	background: #DCDDDE;
+}
+
+.phrase-container {
+	position: absolute;
+	z-index: 10;
+	top: 40%;
 }
 
 .user-input {
@@ -54,16 +74,63 @@ html, body {
 	height: 100%;
 }
 
-.btn.phrase {
-	border: 3px solid #EEEEEE;
+.btn-send {
+	background: #777778;
+	color: #fff;
+}
+
+.phrase {
 	border-radius: 0;
 	color: #484545;
 	background: #FFFEFE;
 	height: 100%;	
 	font-size: 30px;
+	box-shadow: 5px 5px 4px #aaa;
+	margin-bottom: 30px;
 }
-.btn.phrase:hover {
+.phrase:hover {
 	background: #ddd;
+	cursor: pointer;
+}
+
+.princess.phrase {
+	font-family: Waltograph;
+	background: #77BFE8 !important;
+}
+.princess.phrase::after {
+	border-color: transparent #77BFE8 !important;
+}
+.sexy.phrase {
+	font-family: Minstrel;
+	background: #CE4095 !important;
+}
+.sexy.phrase::after {
+	border-color: transparent #CE4095 !important;
+}
+.feminist.phrase {
+	font-family: 'Times New Roman', serif;
+	background: #00487F !important;
+}
+.feminist.phrase::after {
+	border-color: transparent #00487F !important;
+}
+
+.character {
+	border-radius: 999px;
+	height: 85px;
+	width: 85px;
+	background-size: contain;
+	background-position: center;
+	box-shadow: 5px 5px 4px #aaa;
+}
+.princess.character {
+	background-image: url(../images/characters/princess.png);
+}
+.sexy.character {
+	background-image: url(../images/characters/sexy.png);		
+}
+.feminist.character {
+	background-image: url(../images/characters/feminist.png);		
 }
 
 .submit {
@@ -140,6 +207,7 @@ html, body {
 	color: #fff;
 	text-align: center;
 	display: none;
+	z-index: 1000;
 }
 
 .debug {
