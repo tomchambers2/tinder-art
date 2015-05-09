@@ -7,3 +7,8 @@
 	font-family: Waltograph;
 	src: url(../fonts/waltograph.ttf);
 }
+
+@font-face {
+	font-family: DinerScriptPlain;
+	src: url(../fonts/DinerScriptPlain.ttf);
+}

@@ -5,7 +5,6 @@ var FRAME_RATE = 60
 var timerInnerOffset = 0
 var TIMER_CACHE = []
 
-
 var defaultPhrases = [
   'Hi',
   'Hi',
@@ -82,18 +81,23 @@ $(document).ready(function() {
 
   function setDefaultPhrases() {
     resetPhrases()
-	  $('.phrase').each(function(index) {
-      $(this).text(defaultPhrases[index])
+	  $('.user-input').each(function(index) {
+      $(this).val(defaultPhrases[index])
     })  	
   }
 
   socket.on('new partner', function(data) {
-  	setDefaultPhrases()
-
     console.log('setting new partner',data);
+
+    setDefaultPhrases()
+
     $('.partner-name').text(data.name)
     $('.chat-screen').html('')
-    currentUser.photoUrl = data.person.photos[0].url
+    console.log('new data',data);
+    if (data.photoUrl) {
+      currentUser.photoUrl = data.photoUrl
+      $('.man-face').attr('src', currentUser.photoUrl)
+    }
     data.messages.forEach(function(messageObj, i) {
       var type = (messageObj.from === data.partnerId) ? 'remote' : 'user';
       console.log('message typ remote?',type);
@@ -134,13 +138,13 @@ $(document).ready(function() {
   }
 
   socket.on('phrases', function(phrases) {
+    console.log('Phrases event, new phrases will be set', phrases);
     resetPhrases()
-    $('.phrase').each(function(index) {
-      $(this).text(phrases[index])
+    $('.user-input').each(function(index) {
+      $(this).val(phrases[index])
     })
   })
 
-  /* test chat only */
   $('.user-input').keyup(function(e) {
     if (e.which===13) onSubmitInput()
   })
@@ -149,30 +153,30 @@ $(document).ready(function() {
 
 
   function onSubmitInput() {  
+    if (!$('.user-input').val()) return
     console.log('submitting input:',$('.user-input').val());  
-    sendMessage($('.user-input').val())
+    //sendMessage($('.user-input').val())
     addMessage({ type: 'user', message: $('.user-input').val() })
     flushInput($('.user-input'))
+    slideAwayPhrases();
   }  
 
   $('.phrase').click(onSubmitMessage)
 
   function slideAwayPhrases(selectedCharacter) {
-    $('.phrase').each(function(index, phrase) {
-      if ($(this).data('character') === selectedCharacter) return
-      $('.'+$(this).data('character')+'-container').hide('slide', { direction: 'right' }, 800)
+    console.log('sliding away others');
+    $('.input-bar').each(function(index, phrase) {
+      console.log(this);
+      //if ($(this).data('character') === selectedCharacter) return
+        console.log('passed check');
+      $(this).slideDown('2000', function() {
+        console.log('done');
+      })
     })
   }
 
-  function removePhrase(selectedCharacter) {
-    $('.'+selectedCharacter).fadeOut(800, function() {
-          $(this).css({"visibility":"hidden"});
-          $(this).css({"display":"block"});
-    });    
-  }
-
   function resetPhrases() {
-    $('.phrase').each(function(i, phrase) {
+    $('.user-input').each(function(i, phrase) {
       $(this).show()
     })
   }
@@ -216,7 +220,9 @@ $(document).ready(function() {
 
   function getUpdates() {
     var timer = setTimeout(function() {
+      console.log('getting new updates since:',data.lastUpdate);
       socket.emit('get updates', data.lastUpdate)
+      data.lastUpdate = Date.now()
       getUpdates()
     }, 5000)
   }

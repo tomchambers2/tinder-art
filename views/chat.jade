@@ -1,96 +1,100 @@
 doctype html
 html
-    head
-        meta(charset='UTF-8')
-        script(src='/lib/jquery-2.1.3.min.js')
-        script(src='/socket.io/socket.io.js')
-        link(href='/lib/bootstrap/3.3.4/css/bootstrap.min.css' rel='stylesheet')
-        link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")          
-        script(src='/lib/bootstrap/3.3.4/js/bootstrap.min.js')
-        title Chat!
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.7.0/lodash.min.js')
-        script(src='/javascript/chat.js')
-        link(rel='stylesheet' href='/css/chat.css')
-        link(rel='stylesheet' href='/css/fonts.css')
-        link(rel='stylesheet' href='/css/bubbles.css')
-        script(src='/lib/mousetrap.min.js')
-        script(src='/javascript/keyboard-shortcuts.js')
-        script(src="//code.jquery.com/ui/1.11.4/jquery-ui.js")
-    body
-        script.
-            var data = {
-                matchId: '#{partner._id}',
-                partnerId: '#{partner.person._id}',
-                messages: !{messages},
-                lastUpdate: '#{Date.now()}',
-                photoUrl: '#{partner.person.photos[0].url}'
-            }
+	head
+		meta(charset='UTF-8')
+		script(src='/lib/jquery-2.1.3.min.js')
+		script(src='/socket.io/socket.io.js')
+		link(href='/lib/bootstrap/3.3.4/css/bootstrap.min.css' rel='stylesheet')
+		link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")          
+		script(src='/lib/bootstrap/3.3.4/js/bootstrap.min.js')
+		title Chat!
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.7.0/lodash.min.js')
+		script(src='/javascript/chat.js')
+		link(rel='stylesheet' href='/css/chat.css')
+		link(rel='stylesheet' href='/css/fonts.css')
+		link(rel='stylesheet' href='/css/bubbles.css')
+		script(src='/lib/mousetrap.min.js')
+		script(src='/javascript/keyboard-shortcuts.js')
+		script(src="//code.jquery.com/ui/1.11.4/jquery-ui.js")
+	body
+		script.
+			var data = {
+				matchId: '#{partner._id}',
+				partnerId: '#{partner.person._id}',
+				messages: !{messages},
+				lastUpdate: '#{Date.now()}',
+				photoUrl: '#{partner.person.photos[0].url}'
+			}
 
-        .header
-            .row
-                .col-xs-2.text-center
-                    h1
-                        i.fa.fa-arrow-left.fat
-                .col-xs-8.text-center
-                        h1.
-                            <img class="man-face" src="#{partner.person.photos[0].url}"> <span class="partner-name">#{partner.person.name}</span>
-                .col-xs-2.text-center
-                    h1
-                        i.fa.fa-ellipsis-h.fat
-    
-        .chat-screen                      
-            for item in partner.messages   
-                if item.from == partner.person._id
-                    .row.message
-                        .col-xs-2
-                            |<img class="man-face" src="#{partner.person.photos[0].url}">
-                        .col-xs-10
-                            .message.triangle-isosceles.left.
-                                #{item.message}
-                else
-                    .row.message
-                        .col-xs-10.col-xs-offset-2
-                            .message.triangle-isosceles.right.
-                                #{item.message}
 
-            .phrase-container.text-center
-                .row.phrases
-                    .col-xs-12
-                        .row.princess-container
-                            .col-xs-10
-                                .triangle-isosceles.right.phrase.princess(data-character='princess').
-                                    Hi
-                            .col-xs-2.text-left
-                                .character.princess
-                    .col-xs-12
-                        .row.sexy-container
-                            .col-xs-10
-                                .triangle-isosceles.right.phrase.sexy(data-character='sexy').
-                                    Hi
-                            .col-xs-2.text-left
-                                .character.sexy
-                    .col-xs-12
-                        .row.feminist-container
-                            .col-xs-10
-                                .triangle-isosceles.right.phrase.feminist(data-character='feminist').
-                                    Hi
-                            .col-xs-2.text-left
-                                .character.feminist
-        .input-bar
-            .row
-                .col-xs-12
-                    .send-message
-                        input.user-input(type='text' autofocus placeholder='Message').form-control
-                        input.submit(type='submit' value='Send').btn.btn-send
 
-        .error
-            h1 Lost connection to server!
-            h2 Messages will be queued and sent on reconnection
+		.timer.hidden
+			.flashing
+			.inner          
 
-        .debug.hidden
-            div(class='col-xs-12')
-                h1 Chatting with #{partner.person.name}
-                div
-                    p=partner._id
-                    p=partner.person.bio
-                    p.category
+		.header
+			.row
+				.col-xs-2.text-center
+					h1
+						i.fa.fa-arrow-left.fat
+				.col-xs-8.text-center
+						h1.
+							<img class="man-face" src="#{partner.person.photos[0].url}"> <span class="partner-name">#{partner.person.name}</span>
+				.col-xs-2.text-center
+					h1
+						i.fa.fa-ellipsis-h.fat
+	
+		.chat-screen                      
+			for item in partner.messages   
+				if item.from == partner.person._id
+					.row.message
+						.col-xs-2
+							|<img class="man-face" src="#{partner.person.photos[0].url}">
+						.col-xs-10
+							.message.triangle-isosceles.left.
+								#{item.message}
+				else
+					.row.message
+						.col-xs-10.col-xs-offset-2
+							.message.triangle-isosceles.right.
+								#{item.message}
+
+		.input-bar.princess
+			.row
+				.col-xs-2.text-right
+					.character.princess
+				.col-xs-10.text-left
+					.send-message
+						textarea.phrase.princess.user-input(type='text' disabled="true" placeholder='Message').form-control
+						input.submit(type='submit' value='Send').btn.btn-send
+
+		.input-bar.sexy
+			.row
+				.col-xs-2.text-right
+					.character.sexy
+				.col-xs-10.text-left
+					.send-message
+						textarea.phrase.sexy.user-input(type='text' disabled="true" autofocus placeholder='Message').form-control
+						input.submit(type='submit' value='Send').btn.btn-send
+
+		.input-bar.feminist
+			.row
+				.col-xs-2.text-right
+					.character.feminist
+				.col-xs-10.text-left
+					.send-message
+						textarea.phrase.feminist.user-input(type='text' disabled="true" autofocus placeholder='Message').form-control
+						input.submit(type='submit' value='Send').btn.btn-send
+
+
+		.error
+			h1 Lost connection to server!
+			h2 Messages will be queued and sent on reconnection
+
+		.debug.hidden
+			div(class='col-xs-12')
+				h1 Chatting with #{partner.person.name}
+				div
+					p=partner._id
+					p=partner.person.bio
+					p.category

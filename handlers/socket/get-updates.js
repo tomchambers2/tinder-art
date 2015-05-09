@@ -13,21 +13,28 @@ module.exports = function(lastUpdate) {
 		console.error('Client has not set match/partner yet')
 	}
 
+	console.log('Getting updates for front end since:',lastUpdate);
+
     tinder.getUpdatesForMatch(this.matchId, this.partnerId, lastUpdate, function updateCallback(err, messages) {
     	if (err) return console.error(err)
 
     	if (!messages) return
 
-    	messages = messages.map(function(message) {
-    		return message.replace(/jenna/i, "")
+    	var filteredMessages = messages.map(function(message) {
+    		console.log('Prefiltered message:',message)
+    		var filteredMessage = message.replace(/jenna/i, "")
+    		console.log('Filtered message:',filteredMessage)
+    		return filteredMessage
     	})
 
-		_.forEach(messages, function(message) {
+		_.forEach(filteredMessages, function(message) {
+			console.log('sending new message:',message);
 			self.emit('chat message', { type: 'remote', message: message })
 		})
 
 		if (_.last(messages)) {
 			var phrases = phraseFinder(categorise(_.last(messages)))
+			console.log('UPDATE: emitting new phrases')
 			self.emit('phrases', phrases)
 		}
     })

@@ -5,6 +5,12 @@ html, body {
 	font-family: sans-serif;
 }
 
+.container-fluid {
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
 i.fat {
 	font-size: 30px;
 	color: #D24F3B;
@@ -31,7 +37,7 @@ i.fat {
 }
 
 .chat-screen {
-	height: calc(100% - 200px);
+	height: calc(100% - 280px);
 	width: 80%;
 	margin: auto;
 	overflow-y: scroll;
@@ -44,21 +50,15 @@ i.fat {
 
 .input-bar {
 	border-top: 5px solid #eee;
-	height: 100px;
+	height: 60px;
 	background: #DCDDDE;
-}
-
-.phrase-container {
-	position: absolute;
-	z-index: 10;
-	top: 40%;
 }
 
 .user-input {
 	width: 80%;
-	height: 40px;
+	height: 55px;
 	float: left;
-	font-size: 28px;
+	font-size: 14px;
 	border-bottom-right-radius: 0;
 	border-top-right-radius: 0;	
 }
@@ -66,62 +66,35 @@ i.fat {
 .send-message {
 	margin: auto;
 	width: 80%;
-	margin-top: 15px;
 	font-size: 36px;
-}
-
-.row.phrases {
-	height: 100%;
+	text-align: left
 }
 
 .btn-send {
 	background: #777778;
 	color: #fff;
-}
-
-.phrase {
-	border-radius: 0;
-	color: #484545;
-	background: #FFFEFE;
-	height: 100%;	
-	font-size: 30px;
-	box-shadow: 5px 5px 4px #aaa;
-	margin-bottom: 30px;
-}
-.phrase:hover {
-	background: #ddd;
-	cursor: pointer;
+	height: 55px;
 }
 
 .princess.phrase {
 	font-family: Waltograph;
-	background: #77BFE8 !important;
-}
-.princess.phrase::after {
-	border-color: transparent #77BFE8 !important;
 }
 .sexy.phrase {
-	font-family: Minstrel;
-	background: #CE4095 !important;
-}
-.sexy.phrase::after {
-	border-color: transparent #CE4095 !important;
+	font-family: DinerScriptPlain;
 }
 .feminist.phrase {
 	font-family: 'Times New Roman', serif;
-	background: #00487F !important;
-}
-.feminist.phrase::after {
-	border-color: transparent #00487F !important;
 }
 
 .character {
 	border-radius: 999px;
-	height: 85px;
-	width: 85px;
+	height: 50px;
+	width: 50px;
 	background-size: contain;
 	background-position: center;
 	box-shadow: 5px 5px 4px #aaa;
+	position: absolute;
+	right: 0;
 }
 .princess.character {
 	background-image: url(../images/characters/princess.png);
@@ -137,13 +110,13 @@ i.fat {
 	width: 20%;
 	float: left;
 	font-size: 20px;
-	height: 40px;
+	height: 55px;
 	border-bottom-left-radius: 0;
 	border-top-left-radius: 0;
 }
 
 .message {
-	font-size: 24px;
+	font-size: 20px;
 	width: 92%;
 	float: left;
 }
