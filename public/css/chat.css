@@ -115,12 +115,12 @@ height: 75px;
   background-position: center;
   position: absolute;
   right: 0;
-  left: 88px;
+  left: 47px;
   z-index: 10;
   bottom: 1px;
 }
 .princess.character {
-	left: 120px;
+	left: 82px;
 	background-image: url(../images/characters/cutouts/princess.png);
 }
 .sexy.character {

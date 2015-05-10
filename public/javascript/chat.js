@@ -140,9 +140,9 @@ $(document).ready(function() {
 
     if (!$('.user-input').val()) return
     console.log('submitting input:',$('.user-input[data-character="'+character+'"]').val())
-    //sendMessage($('.user-input[data-character="'+character+'"]').val())
+    sendMessage($('.user-input[data-character="'+character+'"]').val())
     addMessage({ type: 'user', character: character, message: $('.user-input[data-character="'+character+'"]').val() })
-    //flushInput($('.user-input'))
+    flushInput($('.user-input'))
     slideAwayPhrases(character);
   }  
 
