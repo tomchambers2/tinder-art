@@ -147,20 +147,15 @@ $(document).ready(function() {
   }  
 
   function slideAwayPhrases(character) {
-    console.log(character);
-
-    //drop away the top two
     $('.input-bar[data-character!="'+character+'"]').hide('slide', {duration:'slow',direction:'down'}, function() {
       $('.inputs').addClass('pushed-down')
     })
-
-    //move the remaining one to the bottom
-      //add a margin to that remaining one
   }
 
   function resetPhrases() {
-    $('.user-input').each(function(i, phrase) {
+    $('.input-bar').each(function(i, phrase) {
       $(this).show()
+      $('.inputs').removeClass('pushed-down')
     })
   }
 
