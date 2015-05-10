@@ -14,8 +14,6 @@ var defaultPhrases = [
 $(document).ready(function() {
   var currentUser = data
   
-  setDefaultPhrases()
-
   var timerHeight = $('.timer').height()
   var increment = timerHeight / (REFRESH_TIMER * FRAME_RATE)
 
@@ -60,8 +58,6 @@ $(document).ready(function() {
     $('.chat-screen').animate( { scrollTop: $('.chat-screen')[0].scrollHeight }, 1000)
   }
 
-  scrollBottom()
-
   var socket = io();
 
   socket.on('connect', function() {
@@ -96,7 +92,7 @@ $(document).ready(function() {
     console.log('new data',data);
     if (data.photoUrl) {
       currentUser.photoUrl = data.photoUrl
-      $('.man-face').attr('src', currentUser.photoUrl)
+      $('.face.main-man').attr('src', currentUser.photoUrl)
     }
     data.messages.forEach(function(messageObj, i) {
       var type = (messageObj.from === data.partnerId) ? 'remote' : 'user';
@@ -124,14 +120,6 @@ $(document).ready(function() {
   	addMessage(chat)
   })
 
-  var messages = _.filter(data.messages, function(message) {
-    return message.from === data.partnerId
-  })
-
-  if (messages.length) {
-  	setCategory(messages)
-  }
-
   function setCategory(messages) {
   	console.log('will cat',_.last(messages).message);
   	socket.emit('categorise', _.last(messages).message)  	
@@ -140,28 +128,23 @@ $(document).ready(function() {
   socket.on('phrases', function(phrases) {
     console.log('Phrases event, new phrases will be set', phrases);
     resetPhrases()
-    $('.user-input').each(function(index) {
-      $(this).val(phrases[index])
-    })
-  })
-
-  $('.user-input').keyup(function(e) {
-    if (e.which===13) onSubmitInput()
+    $('textarea[data-character="princess"]').val(phrases.princess)
+    $('textarea[data-character="feminist"]').val(phrases.feminist)
+    $('textarea[data-character="sexy"]').val(phrases.sexy)
   })
 
   $('.submit').click(onSubmitInput)
 
+  function onSubmitInput(e) {  
+    var character = $(e.target).data('character')
 
-  function onSubmitInput() {  
     if (!$('.user-input').val()) return
-    console.log('submitting input:',$('.user-input').val());  
-    //sendMessage($('.user-input').val())
-    addMessage({ type: 'user', message: $('.user-input').val() })
+    console.log('submitting input:',$('.user-input[data-character="'+character+'"]').val())
+    sendMessage($('.user-input[data-character="'+character+'"]').val())
+    addMessage({ type: 'user', character: character, message: $('.user-input').val() })
     flushInput($('.user-input'))
-    slideAwayPhrases();
+    //slideAwayPhrases();
   }  
-
-  $('.phrase').click(onSubmitMessage)
 
   function slideAwayPhrases(selectedCharacter) {
     console.log('sliding away others');
@@ -181,27 +164,12 @@ $(document).ready(function() {
     })
   }
 
-  function onSubmitMessage() {  
-    //console.log('sending a message',$(this).text());  
-    if (!$(this).text()) {
-      console.log("User attempted to send a blank message")
-      return
-    }
-
-  	sendMessage($(this).text())
-
-    removePhrase($(this).data('character'))
-    slideAwayPhrases($(this).data('character'))
-
-    addMessage({ type: 'user', message: $(this).text() })
-  }
-
   function addMessage(chat, dontPush) {
     console.log('adding',chat.message,'with type',chat.type);
-    var remoteIcon = '<img class="man-face" src="'+currentUser.photoUrl+'">'
     var side = chat.type === 'user' ? 'right' : 'left'
-    var icon = chat.type === 'user' ? '' : remoteIcon
-    $('.chat-screen').append('<div class="row"><div class="col-xs-2">'+icon+'</div><div class="col-xs-10"><div class="message triangle-isosceles '+side+'">'+chat.message+"</div></div></div>")  	
+    remoteIcon = chat.type === 'user' ? '' : '<div class="col-xs-2"><img class="face" src="'+currentUser.photoUrl+'"></div>'
+    localIcon =  chat.type === 'user' ? '<div class="col-xs-2"><div class="face '+chat.character+'"></div></div>' : ''
+    $('.chat-screen').append('<div class="row">'+remoteIcon+'<div class="col-xs-10"><div class="message triangle-isosceles '+side+'">'+chat.message+"</div></div>"+localIcon+"</div>")  	
     if (dontPush) return
     scrollBottom()
   }
@@ -226,5 +194,18 @@ $(document).ready(function() {
       getUpdates()
     }, 5000)
   }
+
+  var messages = _.filter(data.messages, function(message) {
+    return message.from === data.partnerId
+  })
+
+  if (messages.length) {
+    setCategory(messages)
+  }  
+  
   getUpdates()
+
+  setDefaultPhrases()
+
+  scrollBottom()
 })

@@ -99,7 +99,7 @@
 
 .triangle-isosceles.left:after {
   top:16px; /* controls vertical position */
-  left: -45px; /* value = - border-left-width - border-right-width */
+  left: -38px; /* value = - border-left-width - border-right-width */
   bottom:auto;
   border-width:10px 50px 10px 0;
   border-color:transparent #E6E6EB;

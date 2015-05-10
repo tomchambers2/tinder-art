@@ -16,11 +16,23 @@ i.fat {
 	color: #D24F3B;
 }
 
-.man-face {
+.face {
 	width: 65px;
 	height: 65px;
 	border-radius: 9999px;
 	margin-right: 20px;
+	background-size: contain;
+}
+
+.princess.face {
+	left: 120px;
+	background-image: url(../images/characters/princess.png);
+}
+.sexy.face {
+	background-image: url(../images/characters/sexy.png);		
+}
+.feminist.face {
+	background-image: url(../images/characters/feminist.png);		
 }
 
 .message {
@@ -61,6 +73,7 @@ i.fat {
 	font-size: 14px;
 	border-bottom-right-radius: 0;
 	border-top-right-radius: 0;	
+	padding-left: 87px;
 }
 
 .send-message {
@@ -77,33 +90,39 @@ i.fat {
 }
 
 .princess.phrase {
+	color: #79BCE3;
 	font-family: Waltograph;
 }
 .sexy.phrase {
+	color: #D12E87;
 	font-family: DinerScriptPlain;
 }
 .feminist.phrase {
+	color: #003574;
 	font-family: 'Times New Roman', serif;
 }
 
 .character {
-	border-radius: 999px;
-	height: 50px;
-	width: 50px;
-	background-size: contain;
-	background-position: center;
-	box-shadow: 5px 5px 4px #aaa;
-	position: absolute;
-	right: 0;
+height: 75px;
+  width: 200px;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 0;
+  left: 88px;
+  z-index: 10;
+  bottom: 1px;
 }
 .princess.character {
-	background-image: url(../images/characters/princess.png);
+	left: 120px;
+	background-image: url(../images/characters/cutouts/princess.png);
 }
 .sexy.character {
-	background-image: url(../images/characters/sexy.png);		
+	background-image: url(../images/characters/cutouts/marylin.png);		
 }
 .feminist.character {
-	background-image: url(../images/characters/feminist.png);		
+	background-image: url(../images/characters/cutouts/hilary.png);		
 }
 
 .submit {

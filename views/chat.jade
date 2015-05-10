@@ -39,7 +39,7 @@ html
 						i.fa.fa-arrow-left.fat
 				.col-xs-8.text-center
 						h1.
-							<img class="man-face" src="#{partner.person.photos[0].url}"> <span class="partner-name">#{partner.person.name}</span>
+							<img class="face main-man" src="#{partner.person.photos[0].url}"> <span class="partner-name">#{partner.person.name}</span>
 				.col-xs-2.text-center
 					h1
 						i.fa.fa-ellipsis-h.fat
@@ -49,7 +49,7 @@ html
 				if item.from == partner.person._id
 					.row.message
 						.col-xs-2
-							|<img class="man-face" src="#{partner.person.photos[0].url}">
+							|<img class="face" src="#{partner.person.photos[0].url}">
 						.col-xs-10
 							.message.triangle-isosceles.left.
 								#{item.message}
@@ -59,32 +59,29 @@ html
 							.message.triangle-isosceles.right.
 								#{item.message}
 
-		.input-bar.princess
-			.row
-				.col-xs-2.text-right
-					.character.princess
-				.col-xs-10.text-left
-					.send-message
-						textarea.phrase.princess.user-input(type='text' disabled="true" placeholder='Message').form-control
-						input.submit(type='submit' value='Send').btn.btn-send
-
 		.input-bar.sexy
 			.row
-				.col-xs-2.text-right
+				.col-xs-12.text-center
 					.character.sexy
-				.col-xs-10.text-left
 					.send-message
-						textarea.phrase.sexy.user-input(type='text' disabled="true" autofocus placeholder='Message').form-control
-						input.submit(type='submit' value='Send').btn.btn-send
+						textarea.phrase.sexy.user-input(type='text' disabled="true"  data-character='sexy' placeholder='Message').form-control
+						input.submit(type='submit' value='Send' data-character='sexy').btn.btn-send
+
+		.input-bar.princess
+			.row
+				.col-xs-12.text-center
+					.character.princess
+					.send-message
+						textarea.phrase.princess.user-input(type='text' data-character='princess' disabled="true" placeholder='Message').form-control
+						input.submit(type='submit' value='Send' data-character='princess').btn.btn-send
 
 		.input-bar.feminist
 			.row
-				.col-xs-2.text-right
+				.col-xs-12.text-center
 					.character.feminist
-				.col-xs-10.text-left
 					.send-message
-						textarea.phrase.feminist.user-input(type='text' disabled="true" autofocus placeholder='Message').form-control
-						input.submit(type='submit' value='Send').btn.btn-send
+						textarea.phrase.feminist.user-input(type='text' disabled="true" data-character='feminist' placeholder='Message').form-control
+						input.submit(type='submit' value='Send' data-character='feminist').btn.btn-send
 
 
 		.error
