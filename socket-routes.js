@@ -25,7 +25,8 @@ module.exports = function(io) {
 
 	  	socket.on('set partner', setPartner)
 
-		emitter.on('activate user', assignPartner.bind(socket))
+	  	socket.activateUserCallback = assignPartner.bind(socket)
+		emitter.on('activate user', socket.activateUserCallback)
 		
 	  	socket.on('refresh partner', refreshPartner)
 
