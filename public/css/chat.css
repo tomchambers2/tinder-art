@@ -66,6 +66,11 @@ i.fat {
 	background: #DCDDDE;
 }
 
+.pushed-down {
+	padding-top: 120px;
+	transition: padding 1s;
+}
+
 .user-input {
 	width: 80%;
 	height: 55px;

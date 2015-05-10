@@ -140,22 +140,22 @@ $(document).ready(function() {
 
     if (!$('.user-input').val()) return
     console.log('submitting input:',$('.user-input[data-character="'+character+'"]').val())
-    sendMessage($('.user-input[data-character="'+character+'"]').val())
-    addMessage({ type: 'user', character: character, message: $('.user-input').val() })
-    flushInput($('.user-input'))
-    //slideAwayPhrases();
+    //sendMessage($('.user-input[data-character="'+character+'"]').val())
+    addMessage({ type: 'user', character: character, message: $('.user-input[data-character="'+character+'"]').val() })
+    //flushInput($('.user-input'))
+    slideAwayPhrases(character);
   }  
 
-  function slideAwayPhrases(selectedCharacter) {
-    console.log('sliding away others');
-    $('.input-bar').each(function(index, phrase) {
-      console.log(this);
-      //if ($(this).data('character') === selectedCharacter) return
-        console.log('passed check');
-      $(this).slideDown('2000', function() {
-        console.log('done');
-      })
+  function slideAwayPhrases(character) {
+    console.log(character);
+
+    //drop away the top two
+    $('.input-bar[data-character!="'+character+'"]').hide('slide', {duration:'slow',direction:'down'}, function() {
+      $('.inputs').addClass('pushed-down')
     })
+
+    //move the remaining one to the bottom
+      //add a margin to that remaining one
   }
 
   function resetPhrases() {
