@@ -19,7 +19,7 @@ var killUser = require('./middleware/kill-user')
 var activateUser = require('./middleware/activate-user')
 
 module.exports = function(app) {
-	app.get('/dashboard', logger, dirtyFacebookAuth, getMatches, getBlocks, generateStats, dashboardHandler)	
+	app.get('/dashboard/:history?', logger, dirtyFacebookAuth, getMatches, getBlocks, generateStats, dashboardHandler)	
 
 	app.get('/login', logger, loginHandler)
 
