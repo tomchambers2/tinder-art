@@ -49,8 +49,12 @@ i.fat {
 }
 
 .chat-screen {
-	height: -webkit-calc(100% - 280px);
-	height: calc(100% - 280px);
+	//height: calc(100% - 280px);
+	position: absolute;
+	top: 100px;
+	bottom: 180px;
+	left: 0;
+	right: 0;
 	width: 80%;
 	margin: auto;
 	overflow-y: scroll;
@@ -70,6 +74,12 @@ i.fat {
 .pushed-down {
 	padding-top: 120px;
 	transition: padding 1s;
+}
+
+.inputs {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
 }
 
 .user-input {
