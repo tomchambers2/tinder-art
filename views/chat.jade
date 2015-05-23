@@ -44,13 +44,13 @@ html
 					h1
 						i.fa.fa-ellipsis-h.fat
 	
-		.chat-screen                      
+		.chat-screen         
 			for item in partner.messages   
 				if item.from == partner.person._id
-					.row.message
-						.col-xs-2
+					.message
+						.face-container
 							|<img class="face" src="#{partner.person.photos[0].url}">
-						.col-xs-10
+						.message-container
 							.message.triangle-isosceles.left.
 								#{item.message}
 				else
@@ -65,7 +65,7 @@ html
 					.col-xs-12.text-center
 						.character.sexy
 						.send-message
-							textarea.phrase.sexy.user-input(type='text' disabled="true"  data-character='sexy' placeholder='Message').form-control
+							textarea.phrase.sexy.user-input(type='text'   data-character='sexy' placeholder='Message' disabled='true').form-control
 							input.submit(type='submit' value='Send' data-character='sexy').btn.btn-send
 
 			.input-bar.princess(data-character='princess')
@@ -73,7 +73,7 @@ html
 					.col-xs-12.text-center
 						.character.princess
 						.send-message
-							textarea.phrase.princess.user-input(type='text' data-character='princess' disabled="true" placeholder='Message').form-control
+							textarea.phrase.princess.user-input(type='text' data-character='princess'  placeholder='Message' disabled='true').form-control
 							input.submit(type='submit' value='Send' data-character='princess').btn.btn-send
 
 			.input-bar.feminist(data-character='feminist')
@@ -81,7 +81,7 @@ html
 					.col-xs-12.text-center
 						.character.feminist
 						.send-message
-							textarea.phrase.feminist.user-input(type='text' disabled="true" data-character='feminist' placeholder='Message').form-control
+							textarea.phrase.feminist.user-input(type='text'  data-character='feminist' placeholder='Message' disabled='true').form-control
 							input.submit(type='submit' value='Send' data-character='feminist').btn.btn-send
 
 

@@ -1,9 +1,10 @@
-var userIcon = '<div class="col-xs-2"><div class="user-icon"></div></div>'
+var userIcon = '<div class="col-xs-2 face-container"><div class="user-icon"></div></div>'
 
 var REFRESH_TIMER = 60
 var FRAME_RATE = 60
 var timerInnerOffset = 0
 var TIMER_CACHE = []
+var BANNER_HEIGHT = 101
 
 var defaultPhrases = [
   'Hi',
@@ -11,7 +12,7 @@ var defaultPhrases = [
   'Hi'
 ]
 
-$(document).ready(function() {
+$(document).ready(function() {  
   var currentUser = data
   
   var timerHeight = $('.timer').height()
@@ -79,13 +80,12 @@ $(document).ready(function() {
     resetPhrases()
 	  $('.user-input').each(function(index) {
       $(this).val(defaultPhrases[index])
-    })  	
+    })
+    socket.emit('get default phrases')
   }
 
   socket.on('new partner', function(data) {
     console.log('setting new partner',data);
-
-    setDefaultPhrases()
 
     $('.partner-name').text(data.name)
     $('.chat-screen').html('')
@@ -102,6 +102,8 @@ $(document).ready(function() {
     })
     if (data.messages.length) {
     	socket.emit('categorise', _.last(data.messages).message)
+    } else {
+      setDefaultPhrases()
     }
     var timer = new Timer()
     timer.start(function() {
@@ -131,6 +133,7 @@ $(document).ready(function() {
     $('textarea[data-character="princess"]').val(phrases.princess)
     $('textarea[data-character="feminist"]').val(phrases.feminist)
     $('textarea[data-character="sexy"]').val(phrases.sexy)
+    resizeInputs()
   })
 
   $('.submit').click(onSubmitInput)
@@ -162,9 +165,9 @@ $(document).ready(function() {
   function addMessage(chat, dontPush) {
     console.log('adding',chat.message,'with type',chat.type);
     var side = chat.type === 'user' ? 'right' : 'left'
-    remoteIcon = chat.type === 'user' ? '' : '<div class="col-xs-2"><img class="face" src="'+currentUser.photoUrl+'"></div>'
-    localIcon =  chat.type === 'user' ? '<div class="col-xs-2"><div class="face '+chat.character+'"></div></div>' : ''
-    $('.chat-screen').append('<div class="row">'+remoteIcon+'<div class="col-xs-10"><div class="message triangle-isosceles '+side+'">'+chat.message+"</div></div>"+localIcon+"</div>")  	
+    remoteIcon = chat.type === 'user' ? '' : '<div class="col-xs-1 face-container text-right"><img class="face" src="'+currentUser.photoUrl+'"></div>'
+    localIcon =  chat.type === 'user' ? '<div class="col-xs-1 face-container text-left"><div class="face '+chat.character+'"></div></div>' : ''
+    $('.chat-screen').append('<div class="row message">'+remoteIcon+'<div class="col-xs-11 message-container"><div class="message triangle-isosceles '+side+'">'+chat.message+"</div></div>"+localIcon+"</div>")  	
     if (dontPush) return
     scrollBottom()
   }
@@ -183,7 +186,7 @@ $(document).ready(function() {
 
   function getUpdates() {
     var timer = setTimeout(function() {
-      console.log('getting new updates since:',data.lastUpdate);
+      //console.log('getting new updates since:',data.lastUpdate);
       socket.emit('get updates', data.lastUpdate)
       data.lastUpdate = Date.now()
       getUpdates()
@@ -197,10 +200,27 @@ $(document).ready(function() {
   if (messages.length) {
     setCategory(messages)
   }  
+
+  function resizeInputs() {
+    $('.input-bar').each(function() {
+      $(this).find('.user-input').height(0)
+      var height = $(this).find('.user-input')[0].scrollHeight
+      $(this).find('.user-input').outerHeight(height)
+      $(this).find('.submit').outerHeight(height)
+      $(this).find('.submit').css('line-height',($(this).find('.user-input').height()+'px'))
+      $(this).height(height+'px')
+    })
+
+    var chatHeight = $('.inputs').outerHeight
+    var pageHeight = $(window).height
+    $('.chat-screen').outerHeight(pageHeight - chatHeight - BANNER_HEIGHT)
+  }
   
   getUpdates()
 
   setDefaultPhrases()
 
   scrollBottom()
+
+  resizeInputs()
 })

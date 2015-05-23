@@ -10,6 +10,7 @@ var sendMessage = require('./handlers/socket/send-message')
 var onDisconnect = require('./handlers/socket/on-disconnect')
 var categorise = require('./handlers/socket/categorise')
 var assignPartner = require('./handlers/socket/assign-partner')
+var getDefaultPhrases = require('./handlers/socket/get-default-phrases')
 
 module.exports = function(io) {
 	io.use(socketAuth.attachCredentials)
@@ -20,6 +21,8 @@ module.exports = function(io) {
 		socket.emit('request partner')
 
 		socket.on('categorise', categorise)
+
+		socket.on('get default phrases', getDefaultPhrases)
 
 		socket.on('get updates', getUpdates)
 

@@ -20,7 +20,6 @@ i.fat {
 	width: 65px;
 	height: 65px;
 	border-radius: 9999px;
-	margin-right: 20px;
 	background-size: contain;
 }
 
@@ -35,9 +34,6 @@ i.fat {
 	background-image: url(../images/characters/feminist.png);		
 }
 
-.message {
-	margin-top: 15px;
-}
 
 .header {
 	height: 100px;
@@ -55,8 +51,8 @@ i.fat {
 	bottom: 180px;
 	left: 0;
 	right: 0;
-	width: 80%;
-	margin: auto;
+	width: 100%;
+	margin: 0 5%;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -84,9 +80,9 @@ i.fat {
 
 .user-input {
 	width: 80%;
-	height: 55px;
+	height: 85px;
 	float: left;
-	font-size: 14px;
+	font-size: 20px;
 	border-bottom-right-radius: 0;
 	border-top-right-radius: 0;	
 	padding-left: 87px;
@@ -153,6 +149,16 @@ height: 75px;
 .message {
 	font-size: 20px;
 	width: 92%;
+	margin-top: 15px;
+	clear: both;
+}
+.face-container {
+	padding-left: 0;
+	padding-right: 0;
+	float: left;
+}
+
+.message-container {
 	float: left;
 }
 
@@ -224,3 +230,4 @@ height: 75px;
 	top: 50px;
 	background: #fff;
 }
+
