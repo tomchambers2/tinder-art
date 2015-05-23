@@ -90,7 +90,7 @@ i.fat {
 
 .send-message {
 	margin: auto;
-	width: 80%;
+	width: 97%;
 	font-size: 36px;
 	text-align: left
 }
@@ -115,19 +115,19 @@ i.fat {
 }
 
 .character {
-height: 75px;
+	height: 75px;
   width: 200px;
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
   right: 0;
-  left: 47px;
+  left: -41px;
   z-index: 10;
   bottom: 1px;
 }
 .princess.character {
-	left: 82px;
+	left: -7px;
 	background-image: url(../images/characters/cutouts/princess.png);
 }
 .sexy.character {
