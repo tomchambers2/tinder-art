@@ -52,7 +52,7 @@ i.fat {
 	left: 0;
 	right: 0;
 	width: 100%;
-	margin: 0 5%;
+	//margin: 0 5%;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -146,12 +146,30 @@ height: 75px;
 	border-top-left-radius: 0;
 }
 
+.message-box {
+}
+.face-box {
+	width: 5%;
+}
+
+.message-row {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
 .message {
 	font-size: 20px;
-	width: 92%;
-	margin-top: 15px;
-	clear: both;
+	max-width: 58%;
 }
+.message.right {
+	float: right;
+	text-align: right;
+}
+
+.no-padding {
+	padding: 0;
+}
+
 .message.local {
 	float: right;
 }

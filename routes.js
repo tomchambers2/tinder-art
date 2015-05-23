@@ -18,6 +18,7 @@ var dirtyFacebookAuth = require('./middleware/dirty-facebook-auth')
 var killUser = require('./middleware/kill-user')
 var activateUser = require('./middleware/activate-user')
 var attachCharacters = require('./middleware/attach-characters')
+var stripUserName = require('./middleware/strip-user-name')
 
 module.exports = function(app) {
 	app.get('/dashboard/:history?', logger, dirtyFacebookAuth, getMatches, getBlocks, generateStats, dashboardHandler)	
@@ -38,6 +39,6 @@ module.exports = function(app) {
 		return res.render('data-input')
 	})
 
-	app.get('/', logger, dirtyFacebookAuth, getChatPartner, attachCharacters, chatHandler)
+	app.get('/', logger, dirtyFacebookAuth, getChatPartner, stripUserName, attachCharacters, chatHandler)
 
 }

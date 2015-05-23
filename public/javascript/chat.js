@@ -1,15 +1,13 @@
-var userIcon = '<div class="col-xs-2 face-container"><div class="user-icon"></div></div>'
-
-var REFRESH_TIMER = 60
+var REFRESH_TIMER = 10
 var FRAME_RATE = 60
 var timerInnerOffset = 0
 var TIMER_CACHE = []
 var BANNER_HEIGHT = 101
 
 var initialPhrases = [
+  'You are stunning',
   'You sing a song?',
-  'Hi, pleased to meet you',
-  'You are stunning'
+  'Hi, pleased to meet you'
 ]
 
 $(document).ready(function() {  
@@ -93,7 +91,7 @@ $(document).ready(function() {
     console.log('setting new partner',data);
 
     $('.partner-name').text(data.name)
-    $('.chat-screen').html('')
+    $('.chat-screen .container').html('')
     console.log('new data',data);
     if (data.photoUrl) {
       currentUser.photoUrl = data.photoUrl
@@ -103,9 +101,12 @@ $(document).ready(function() {
       var type = (messageObj.from === data.partnerId) ? 'remote' : 'user';
       console.log('message typ remote?',type);
       var push = (i === data.messages.length - 1) ? true : false;
-      addMessage({ type: type, message: messageObj.message }, push)
+      addMessage({ type: type, message: messageObj.message, character: messageObj.character }, push)
     })
     if (data.messages.length) {
+      var remoteMessages = _.filter(data.messages, function(messageObj) {
+        return messageObj.from === data.partnerId
+      })
     	socket.emit('categorise', _.last(data.messages).message)
     } else {
       setInitialPhrases()
@@ -135,16 +136,16 @@ $(document).ready(function() {
   socket.on('phrases', function(phrases) {
     console.log('Phrases event, new phrases will be set', phrases);
     resetPhrases()
-    $('textarea[data-character="princess"]').slideToggle()
-    $('textarea[data-character="feminist"]').slideToggle()
-    $('textarea[data-character="sexy"]').slideToggle()    
+    $('textarea').slideToggle()
+
     $('textarea[data-character="princess"]').val(phrases.princess)
     $('textarea[data-character="feminist"]').val(phrases.feminist)
     $('textarea[data-character="sexy"]').val(phrases.sexy)
-    $('textarea[data-character="princess"]').slideToggle()
-    $('textarea[data-character="feminist"]').slideToggle()
-    $('textarea[data-character="sexy"]').slideToggle()    
-    resizeInputs()
+    
+    $('textarea').slideToggle(function() {
+      resizeInputs()
+    })
+
   })
 
   $('.submit').click(onSubmitInput)
@@ -169,9 +170,9 @@ $(document).ready(function() {
   function addMessage(chat, dontPush) {
     console.log('adding',chat.message,'with type',chat.type);
     var side = chat.type === 'user' ? 'right' : 'left'
-    remoteIcon = chat.type === 'user' ? '' : '<div class="face-container text-right"><img class="face" src="'+currentUser.photoUrl+'"></div>'
-    localIcon =  chat.type === 'user' ? '<div class="face-container text-left"><div class="face '+chat.character+'"></div></div>' : ''
-    $('.chat-screen').append('<div class="message">'+remoteIcon+'<div class="message-container"><div class="message triangle-isosceles '+side+'">'+chat.message+"</div></div>"+localIcon+"</div>")  	
+    remoteIcon = chat.type === 'user' ? '' : '<div class="col-xs-1 no-padding face-box"><img class="face" src="'+currentUser.photoUrl+'"></div>'
+    localIcon =  chat.type === 'user' ? '<div class="col-xs-1 no-padding face-box"><div class="face '+chat.character+'"></div></div>' : ''
+    $('.chat-screen .container').append('<div class="row message-row">'+remoteIcon+'<div class="col-xs-11 no-padding message-box"><div class="message triangle-isosceles '+side+'">'+chat.message+"</div></div>"+localIcon+"</div>")  	
     if (dontPush) return
     scrollBottom()
   }
@@ -216,9 +217,8 @@ $(document).ready(function() {
       $(this).height(height+'px')
     })
 
-    var chatHeight = $('.inputs').outerHeight
-    var pageHeight = $(window).height
-    $('.chat-screen').outerHeight(pageHeight - chatHeight - BANNER_HEIGHT)
+    var chatHeight = $('.inputs').outerHeight()
+    $('.chat-screen').css('bottom',chatHeight)
   }
   
   getUpdates()

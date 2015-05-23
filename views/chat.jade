@@ -44,22 +44,23 @@ html
 					h1
 						i.fa.fa-ellipsis-h.fat
 	
-		.chat-screen         
-			for item in partner.messages   
-				if item.from == partner.person._id
-					.message.remote
-						.face-container
-							|<img class="face" src="#{partner.person.photos[0].url}">
-						.message-container
-							.message.triangle-isosceles.left
-								|#{item.message}
-				else
-					.message.local
-						.message-container
-							.message.triangle-isosceles.right
-								|#{item.message}
-						.face-container
-							|<img class="face #{item.character}">
+		.chat-screen
+			.chat.container
+				for item in partner.messages   
+					if item.from == partner.person._id
+						.row.message-row
+							.col-xs-1.no-padding.face-box
+								|<img class="face" src="#{partner.person.photos[0].url}">
+							.col-xs-11.no-padding.message-box
+								.message.triangle-isosceles.left
+									|#{item.message}
+					else
+						.row.message-row
+							.col-xs-11.no-padding.message-box.text-right
+								.message.triangle-isosceles.right
+									|#{item.message}
+							.col-xs-1.no-padding.face-box
+								|<img class="face #{item.character}">
 
 		.inputs
 			.input-bar.sexy(data-character='sexy')
