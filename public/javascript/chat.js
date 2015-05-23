@@ -6,10 +6,10 @@ var timerInnerOffset = 0
 var TIMER_CACHE = []
 var BANNER_HEIGHT = 101
 
-var defaultPhrases = [
-  'Hi',
-  'Hi',
-  'Hi'
+var initialPhrases = [
+  'You sing a song?',
+  'Hi, pleased to meet you',
+  'You are stunning'
 ]
 
 $(document).ready(function() {  
@@ -76,13 +76,18 @@ $(document).ready(function() {
     socket.emit('set partner', data)
   })
 
-  function setDefaultPhrases() {
+  function setInitialPhrases() {
     resetPhrases()
 	  $('.user-input').each(function(index) {
-      $(this).val(defaultPhrases[index])
+      $(this).val(initialPhrases[index])
     })
+  }
+
+  function setDefaultPhrases() {
     socket.emit('get default phrases')
   }
+    
+
 
   socket.on('new partner', function(data) {
     console.log('setting new partner',data);
@@ -103,7 +108,7 @@ $(document).ready(function() {
     if (data.messages.length) {
     	socket.emit('categorise', _.last(data.messages).message)
     } else {
-      setDefaultPhrases()
+      setInitialPhrases()
     }
     var timer = new Timer()
     timer.start(function() {
@@ -130,9 +135,15 @@ $(document).ready(function() {
   socket.on('phrases', function(phrases) {
     console.log('Phrases event, new phrases will be set', phrases);
     resetPhrases()
+    $('textarea[data-character="princess"]').slideToggle()
+    $('textarea[data-character="feminist"]').slideToggle()
+    $('textarea[data-character="sexy"]').slideToggle()    
     $('textarea[data-character="princess"]').val(phrases.princess)
     $('textarea[data-character="feminist"]').val(phrases.feminist)
     $('textarea[data-character="sexy"]').val(phrases.sexy)
+    $('textarea[data-character="princess"]').slideToggle()
+    $('textarea[data-character="feminist"]').slideToggle()
+    $('textarea[data-character="sexy"]').slideToggle()    
     resizeInputs()
   })
 
@@ -146,13 +157,6 @@ $(document).ready(function() {
     sendMessage($('.user-input[data-character="'+character+'"]').val())
     addMessage({ type: 'user', character: character, message: $('.user-input[data-character="'+character+'"]').val() })
     flushInput($('.user-input'))
-    slideAwayPhrases(character);
-  }  
-
-  function slideAwayPhrases(character) {
-    $('.input-bar[data-character!="'+character+'"]').hide('slide', {duration:'slow',direction:'down'}, function() {
-      $('.inputs').addClass('pushed-down')
-    })
   }
 
   function resetPhrases() {
@@ -165,15 +169,16 @@ $(document).ready(function() {
   function addMessage(chat, dontPush) {
     console.log('adding',chat.message,'with type',chat.type);
     var side = chat.type === 'user' ? 'right' : 'left'
-    remoteIcon = chat.type === 'user' ? '' : '<div class="col-xs-1 face-container text-right"><img class="face" src="'+currentUser.photoUrl+'"></div>'
-    localIcon =  chat.type === 'user' ? '<div class="col-xs-1 face-container text-left"><div class="face '+chat.character+'"></div></div>' : ''
-    $('.chat-screen').append('<div class="row message">'+remoteIcon+'<div class="col-xs-11 message-container"><div class="message triangle-isosceles '+side+'">'+chat.message+"</div></div>"+localIcon+"</div>")  	
+    remoteIcon = chat.type === 'user' ? '' : '<div class="face-container text-right"><img class="face" src="'+currentUser.photoUrl+'"></div>'
+    localIcon =  chat.type === 'user' ? '<div class="face-container text-left"><div class="face '+chat.character+'"></div></div>' : ''
+    $('.chat-screen').append('<div class="message">'+remoteIcon+'<div class="message-container"><div class="message triangle-isosceles '+side+'">'+chat.message+"</div></div>"+localIcon+"</div>")  	
     if (dontPush) return
     scrollBottom()
   }
 
   function sendMessage(message) {
   	socket.emit('send message', message)
+    setDefaultPhrases()
   }
 
   function flushInput(input) {
@@ -218,7 +223,7 @@ $(document).ready(function() {
   
   getUpdates()
 
-  setDefaultPhrases()
+  setInitialPhrases()
 
   scrollBottom()
 
