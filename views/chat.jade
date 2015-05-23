@@ -47,17 +47,19 @@ html
 		.chat-screen         
 			for item in partner.messages   
 				if item.from == partner.person._id
-					.message
+					.message.remote
 						.face-container
 							|<img class="face" src="#{partner.person.photos[0].url}">
 						.message-container
-							.message.triangle-isosceles.left.
-								#{item.message}
+							.message.triangle-isosceles.left
+								|#{item.message}
 				else
-					.row.message
-						.col-xs-10.col-xs-offset-2
-							.message.triangle-isosceles.right.
-								#{item.message}
+					.message.local
+						.message-container
+							.message.triangle-isosceles.right
+								|#{item.message}
+						.face-container
+							|<img class="face #{item.character}">
 
 		.inputs
 			.input-bar.sexy(data-character='sexy')

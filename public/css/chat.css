@@ -152,6 +152,9 @@ height: 75px;
 	margin-top: 15px;
 	clear: both;
 }
+.message.local {
+	float: right;
+}
 .face-container {
 	padding-left: 0;
 	padding-right: 0;
