@@ -25,7 +25,7 @@ i.fat {
 
 .princess.face {
 	left: 120px;
-	background-image: url(../images/characters/princess.png);
+	background-image: url(../images/characters/snow-white.png);
 }
 .sexy.face {
 	background-image: url(../images/characters/sexy.png);		
@@ -128,7 +128,7 @@ i.fat {
 }
 .princess.character {
 	left: -7px;
-	background-image: url(../images/characters/cutouts/princess.png);
+	background-image: url(../images/characters/cutouts/snow-white.png);
 }
 .sexy.character {
 	background-image: url(../images/characters/cutouts/marylin.png);		
