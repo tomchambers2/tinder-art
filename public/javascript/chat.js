@@ -1,4 +1,4 @@
-var REFRESH_TIMER = 10
+var REFRESH_TIMER = 60
 var FRAME_RATE = 60
 var timerInnerOffset = 0
 var TIMER_CACHE = []
