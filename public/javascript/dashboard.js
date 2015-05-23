@@ -63,6 +63,11 @@ $(document).ready(function() {
 			console.log(JSON.stringify(data));
 			var stats = data.stats
 
+			if (!stats) {
+				$('.generate-result').html('<strong>No matches created</strong>')
+				return
+			}
+
 			var statsTable = '<table>'
 			statsTable += '<tr><td>Total attempts:</td><td>'+stats.attempts+'</td></tr>'
 			statsTable += '<tr><td>Total likes:</td><td>'+stats.likes+'</td></tr>'
