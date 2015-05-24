@@ -159,11 +159,12 @@ i.fat {
 
 .message {
 	font-size: 20px;
-	width: 83%;
+	max-width: 83%;
+	display: inline-block;
+	text-align: left;
 }
 .message.right {
 	float: right;
-	text-align: right;
 }
 
 .no-padding {

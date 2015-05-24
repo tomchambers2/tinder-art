@@ -47,7 +47,7 @@
 ------------------------------------------ */
 
 .triangle-isosceles.left {
-  margin-left:50px;
+  margin-left:56px;
   background:#E6E6EB;
   padding-left: 25px;
   padding-right: 25px;
@@ -58,7 +58,7 @@
 
 .triangle-isosceles.right {
   color: #349BF8;
-  margin-right:50px;
+  margin-right:43px;
   background:#349BF8;
   color: #fff;
   padding-left: 25px;
