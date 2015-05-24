@@ -159,7 +159,7 @@ i.fat {
 
 .message {
 	font-size: 20px;
-	max-width: 58%;
+	width: 83%;
 }
 .message.right {
 	float: right;
