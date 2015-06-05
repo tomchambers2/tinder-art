@@ -922,6 +922,589 @@
 	{
 		"document": "So, you're working/studying in london then?",
 		"category": "workingstudying"
+	},
+	{
+		"document": "Now are you a real person?",
+		"category": "doubt"
+	},
+	{
+		"document": "You are stunning",
+		"category": "picture"
+	},
+	{
+		"document": "So got much planned over holiday?",
+		"category": "weekendplan"
+	},	
+	{
+		"document": "Hey missy how's your day been? :)",
+		"category": "howareyou"
+	},
+	{
+		"document": "Gotta say you look stunning :) x",
+		"category": "picture"
+	},	
+	{
+		"document": "this weekend I'm thinking about going on holiday for the foreseeable future. You coming? ",
+		"category": "meetup"
+	},
+	{
+		"document": "That's an impressive picture, was it taken by a professional?",
+		"category": "pucture"
+	},
+	{
+		"document": "Where are you?",
+		"category": "location"
+	},
+	{
+		"document": "So how much would it cost for me to fuck you? X",
+		"category": "meetup"
+	},
+	{
+		"document": "I'm in London next week",
+		"category": "whatiamdoing"
+	},
+        {
+		"document": "You're utterly gorgeous",
+		"category": "picture"
+	},
+	{
+		"document": "If you don't delete me I'll assume you don't mind me pestering you.",
+		"category": "doubt"
+	},
+	{
+		"document": "You must be a spammer :)",
+		"category": "doubt"
+	},
+	{
+		"document": "Can't blame you... Looks pretty fantastic",
+		"category": "picture"
+	},
+	{
+		"document": "Most don't really know me either",
+		"category": "makesnosense"
+	},
+	{
+		"document": "I won't sing a song though haha",
+		"category": "makesnosense"
+	},
+	{
+		"document": "I won't sing a song though haha",
+		"category": "makesnosense"
+	},
+	{
+		"document": "Hey , You look great!",
+		"category": "picture"
+	},
+	{
+		"document": "What is your number x",
+		"category": "meetup"
+	},	
+	{
+		"document": "Have you planned anything for 2nite??",
+		"category": "weekendplan"
+	},	
+	{
+		"document": "Mmm..... You for real?",
+		"category": "doubt"
+	},
+	{
+		"document": "Wow!",
+		"category": "makesnosense"
+	},
+	{
+		"document": "You're not a bot!",
+		"category": "doubt"
+	},
+	{
+		"document": "I'm impressed",
+		"category": "picture"
+	},
+	{
+		"document": "How are you doing tonight princess?",
+		"category": "weekendplan"
+	},
+	{
+		"document": "Agreed",
+		"category": "love"
+	},
+	{
+		"document": "Agreed",
+		"category": "love"
+	},
+	{
+		"document": "And what makes a princess as pretty as you come to the dark alleys of tinder?",
+		"category": "whatbring"
+	},
+	{
+		"document": "You do know you are surealy beautiful",
+		"category": "picture"
+	},
+	{
+		"document": "Right, my work here is done as I've already scared you away",
+		"category": "meetup"
+	},
+	{
+		"document": "You have a goodnight gorgeous one",
+		"category": "weekend"
+	},
+	{
+		"document": "You alive?",
+		"category": "doubt"
+	},
+	{
+		"document": "Morning",
+		"category": "hello"
+	},
+	{
+		"document": "You're the most beautiful match that doesn't talk to me",
+		"category": "picture"
+	},
+	{
+		"document": "Nothing?",
+		"category": "noanswer"
+	},
+	{
+		"document": "And I'm talking by myself again...?",
+		"category": "noanswer"
+	},
+	{
+		"document": "Your sexiness is only surpassed by your quietness",
+		"category": "picture"
+	},
+	{
+		"document": "Gonna jump off a bridge now",
+		"category": "whatsyourdeal"
+	},
+	{
+		"document": "Not even a hi",
+		"category": "noanswer"
+	},
+	{
+		"document": "You're not getting me into bed this way you know...",
+		"category": "love"
+	},
+	{
+		"document": "You are in the picture?",
+		"category": "nicetomeetyou"
+	},
+	{
+		"document": "Do u have FB",
+		"category": "meetup"
+	},
+	{
+		"document": "where are u from",
+		"category": "location"
+	},
+	{
+		"document": "Don't you want to play?",
+		"category": "meetup"
+	},
+	{
+		"document": "Nice pic btw?",
+		"category": "picture"
+	},
+	{
+		"document": "You look mischievous. I like that. I like lots of things.",
+		"category": "picture"
+	},
+	{
+		"document": "Things are better with cake",
+		"category": "makenosense"
+	},
+	{
+		"document": " How is your week going?",
+		"category": "weekend"
+	},
+	{
+		"document": " Do you want to dance?",
+		"category": "meetup"
+	},
+	{
+		"document": " Wow how are you😘",
+		"category": "picture"
+	},
+	{
+		"document": " Hey you ok x",
+		"category": "howareyou"
+	},
+	{
+		"document": " Good morning :) nice to meet you :)",
+		"category": "nicetomeetyou"
+	},
+	{
+		"document": " You are absolutely stunning",
+		"category": "picture"
+	},
+	{
+		"document": " Heyyy",
+		"category": "hello"
+	},
+	{
+		"document": "Nice dress! ;-)",
+		"category": "picture"
+	},
+	{
+		"document": "Need any help getting out of it?",
+		"category": "meetup"
+	},
+	{
+		"document": "Understandably... from what I've seen it's pretty impressive!?",
+		"category": "picture"
+	},
+	{
+		"document": "I can probably help the world to see it... I'm a photographer.",
+		"category": "mansappearance"
+	},
+	{
+		"document": "Probably easier to chat on WhatsApp. What's your number?",
+		"category": "meetup"
+	},
+	{
+		"document": "Nice dress btw",
+		"category": "picture"
+	},
+	{
+		"document": "Sing?",
+		"category": "whatbring"
+	},
+	{
+		"document": "I really think u are pretty I would like to get to no u have a very good look about u hope to here from u x",
+		"category": "picture"
+	},
+	{
+		"document": "We'll I try to be but your hair and r lovely so we're are u from x",
+		"category": "location"
+	},
+	{
+		"document": "So how's your day been wat do u do for work x",
+		"category": "weekend"
+	},
+	{
+		"document": "Thanks for the match!",
+		"category": "nicetomeetyou"
+	},
+	{
+		"document": "Hey pretty lady",
+		"category": "nicetomeetyou"
+	},
+	{
+		"document": "Definitely a fake account....haha",
+		"category": "doubt"
+	},
+	{
+		"document": "Hey hotstuff x",
+		"category": "nicetomeetyou"
+	},
+	{
+		"document": "how's your sexy self this afternoon?",
+		"category": "howareyou"
+	},
+	{
+		"document": "you look very nice in pic",
+		"category": "picture"
+	},
+	{
+		"document": "Not going replay",
+		"category": "noanswer"
+	},
+	{
+		"document": "Lovely",
+		"category": "picture"
+	},
+	{
+		"document": "I have a feeling u have a dominant personality",
+		"category": "picture"
+	},
+	{
+		"document": "Have you got any nice plans for the weekend ?",
+		"category": "weekendplan"
+	},
+	{
+		"document": "Great to be matched to you!",
+		"category": "nicetomeetyou"
+	},
+	{
+		"document": "Any plans for the upcoming weekend?",
+		"category": "weekendplan"
+	},
+	{
+		"document": "Agree with your real lover philosphy!",
+		"category": "love"
+	},
+	{
+		"document": "We should go for drinks sometime",
+		"category": "meetup"
+	},
+	{
+		"document": "You free this Friday?",
+		"category": "meetup"
+	},
+	{
+		"document": "Any chance you can shoot to dirty martini for drinks this Friday...",
+		"category": "meetup"
+	},
+	{
+		"document": "....is that a yes?",
+		"category": "makenosense"
+	},
+	{
+		"document": "Hey! You would never guess how many left swipes I had to make to get myself to you. Panic over though, I found you at last! Ha.",
+		"category": "nicetomeetyou"
+	},
+	{
+		"document": "What are you doing today??",
+		"category": "whatareyoudoing"
+	},
+	{
+		"document": "What about going out for a glas of wine?",
+		"category": "meetup"
+	},
+	{
+		"document": "Actually I am romantic in real life )",
+		"category": "mansappearance"
+	},
+	{
+		"document": "Hahahah. Sarcastic ... I like your style ))",
+		"category": "makenosense"
+	},
+	{
+		"document": "I am new to London and open to meet new people, especially if they look as gorgeous as you",
+		"category": "nicetomeetyou"
+	},
+	{
+		"document": "Hi , I have no punch line to break the ice ))",
+		"category": "love"
+	},
+	{
+		"document": "Coucou hello good morning et bonjour",
+		"category": "nicetomeetyou"
+	},
+	{
+		"document": "Would be nice if we get to know each other",
+		"category": "meetup"
+	},
+	{
+		"document": "What do you think",
+		"category": "makenosense"
+	},
+	{
+		"document": "Hey , you made my day",
+		"category": "picture"
+	},
+	{
+		"document": "Are you free next weekend for a trip to Cairo?",
+		"category": "meetup"
+	},
+	{
+		"document": "Where do you live?",
+		"category": "location"
+	},
+	{
+		"document": "Why not.. We could met",
+		"category": "meetup"
+	},
+	{
+		"document": "How's it going?",
+		"category": "howraeyou"
+	},
+	{
+		"document": "In work??",
+		"category": "“whatiamdoing"
+	},
+	{
+		"document": "Are you fake",
+		"category": "“doubt"
+	},
+	{
+		"document": "So ... nice wallpaper! :)",
+		"category": "picture"
+	},
+	{
+		"document": "How's it going, upto much today?",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hello Thanks for swiping my right?",
+		"category": "nicetomeetyou"
+	},
+	{
+		"document": "What happened next",
+		"category": "love"
+	},
+	{
+		"document": "would like to find out more about you",
+		"category": "picture"
+	},
+	{
+		"document": "The gleam in your eyes is so familiar a gleam and I know it's true",
+		"category": "makenosense"
+	},
+	{
+		"document": "So shall I make your dream come true?",
+		"category": "makenosense"
+	},
+	{
+		"document": "Hey you alright",
+		"category": "howareyou"
+	},
+	{
+		"document": "Holy shit you're gorgeous",
+		"category": "picture"
+	},
+	{
+		"document": "I'm usually more 'common people' than Disney when it comes to Karaoke...",
+		"category": "makenosense"
+	},
+	{
+		"document": "Stunning outfit you have on there x",
+		"category": "picture"
+	},
+	{
+		"document": "And your not just any woman... A your a beautiful one at that... Are you having a good day!?",
+		"category": "howareyou"
+	},
+	{
+		"document": "I'm just finished work and you!?",
+		"category": "whatiamdoing"
+	},
+	{
+		"document": "Good day ?",
+		"category": "howraeyou"
+	},
+	{
+		"document": "I am not a singer",
+		"category": "makenosense"
+	},
+	{
+		"document": "Why did you ask me that",
+		"category": "makenosense"
+	},
+	{
+		"document": "Up to anything exciting? x",
+		"category": "howareyou"
+	},
+	{
+		"document": "you look rather splendid!",
+		"category": "picture"
+	},
+	{
+		"document": "Oh my!!",
+		"category": "picture"
+	},
+	{
+		"document": "Are you an actress?",
+		"category": "workingstudying"
+	},
+	{
+		"document": "Are you an model?",
+		"category": "workingstudying"
+	},
+	{
+		"document": "What is your favorite thing in the world?",
+		"category": "love"
+	},
+	{
+		"document": "Really",
+		"category": "makenosense"
+	},
+	{
+		"document": "How's your week treating you?",
+		"category": "weekend"
+	},
+	{
+		"document": "Getting some sun??",
+		"category": "howareyou"
+	},
+	{
+		"document": "Trying to work out where you're from?",
+		"category": "location"
+	},
+	{
+		"document": "It's just that you're the most beautiful enchanting looking girl. You're totally sexy and I'm hoping you're real",
+		"category": "picture"
+	},
+	{
+		"document": "Do you model?",
+		"category": "workingstudying"
+	},
+	{
+		"document": "And I'm wondering what nationality you are",
+		"category": "location"
+	},
+	{
+		"document": "How can I get to know you",
+		"category": "makenosense"
+	},
+	{
+		"document": "Di you have Face Book baby?",
+		"category": "meetup"
+	},
+	{
+		"document": "What are you looking for in site ?",
+		"category": "whatbring"
+	},
+	{
+		"document": "I dream of a beautiful wife.",
+		"category": "love"
+	},
+	{
+		"document": "This is FANTASTIC news!",
+		"category": "love"
+	},
+	{
+		"document": "It seemed that we both want the same thing",
+		"category": "nicetomeetyou"
+	},
+	{
+		"document": "How is the end of the day ?",
+		"category": "howareyou"
+	},
+	{
+		"document": "Drink tonight ?",
+		"category": "meetup"
+	},
+	{
+		"document": "Wise words",
+		"category": "love"
+	},
+	{
+		"document": "So tell me more about your self",
+		"category": "workingstudying"
+	},
+	{
+		"document": "Who are you as a person ?",
+		"category": "workingstudying"
+	},
+	{
+		"document": "You have viber?",
+		"category": "meetup"
+	},
+	{
+		"document": "You have viber?",
+		"category": "picture"
+	},
+	{
+		"document": "You have viber or whatsApp? My number is",
+		"category": "meetup"
+	},
+	{
+		"document": "I can find you on whats app if you give me your telefonnumber",
+		"category": "meetup"
+	},
+	{
+		"document": "Tell me about you",
+		"category": "workingstudying"
+	},
+	{
+		"document": "What do you do?",
+		"category": "workingstudying"
+	},
+	{
+		"document": "Tell me something random?",
+		"category": "doubt"
+	},
+	{
+		"document": "Your not much of a talker :p",
+		"category": "noanswer"
 	}
-
 ]
