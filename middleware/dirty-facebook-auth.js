@@ -9,7 +9,7 @@ var options = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'
   }
 }
-var userId = '100009628062333'
+var userId = '100009480757843'
 
 function getCredentials(callback) {
 	redis.hgetall('facebook-user', function(err, facebookUser) {
@@ -29,7 +29,6 @@ function refreshCredentials(callback) {
 	};
 
 	request(options, function(err, response, body) {
-		console.log('got reply',err,response.request.uri)
 		var access_token = /access_token=([a-zA-Z0-9]+)/.exec(response.request.uri.hash)
 		var expiresIn = /expires_in=([0-9]+)$/.exec(response.request.uri.hash)
 		console.log(expiresIn);
