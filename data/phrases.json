@@ -43,7 +43,7 @@
       "I'm like a shooting star, I've come so far I can't go back to where I used to be!"
     ],
     "doubt": [
-      "I am like a dream. A wonderful dream come true."
+      "I am like a dream. A wonderful dream come true.",
       "Open your eyes, your heart can tell you no lies"
     ],
     "weekend": [
@@ -94,8 +94,8 @@
     "default": [
       "Today, more than ever, we see clearly that the fate of women and girls around the world is tied up with the greatest security and economic challenges of our time.",
       "We must stop thinking of the individual and start thinking about what is best for society",
-      "We should remove barriers so we can focus on the important things: Supporting employees, doing good work, & contributing to our communities.
-      
+      "We should remove barriers so we can focus on the important things: Supporting employees, doing good work, & contributing to our communities."
+    ],  
     "hello": [
       "Hi"
     ],
@@ -147,7 +147,7 @@
       "Self-esteem isn't everything; it's just that there's nothing without"
     ],
     "love": [
-      "We should remove barriers so we can focus on the important things: Supporting employees, doing good work, & contributing to our communities.
+      "We should remove barriers so we can focus on the important things: Supporting employees, doing good work, & contributing to our communities."
     ],
     "whatbring": [
       "Well, I think we should be actively involved in public life"
@@ -178,9 +178,7 @@
     ],
     "howareyou": [
       "How did you find me?",
-      "You know, most people really don't know me",
-      
-      
+      "You know, most people really don't know me"
     ],
     "goodbye": [
       "Who said nights were for sleep?",
