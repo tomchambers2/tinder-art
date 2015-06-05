@@ -253,3 +253,7 @@ i.fat {
 	background: #fff;
 }
 
+.next-person {
+	cursor: pointer;
+}
+

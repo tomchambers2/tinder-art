@@ -220,6 +220,10 @@ $(document).ready(function() {
     var chatHeight = $('.inputs').outerHeight()
     $('.chat-screen').css('bottom',chatHeight)
   }
+
+  $('.next-person').click(function() {
+    refreshPartner()
+  })
   
   getUpdates()
 
