@@ -7,17 +7,21 @@
     "default": [
       "You sing a song?",
       "Life flows along with a smile and a song.",
-      "I'm wishing for the one I love to find me. Some day my Prince will come.",
-      "Remember, you’re the one who can fill the world with sunshine"
+      "I'm wishing for the one I love to find me. Some day my Prince will come",
+      "Remember, you’re the one who can fill the world with sunshine",
+      "If I do marry, I want it to be for love",
+      "People can't order me to stop dreaming"
     ],
     "hello": [
-      "Hi"
+      "Hi",
+      "If you dream a thing more than once, it's sure to come true. And I've seen you so many times"
     ],
     "howareyou": [
       "It's all so magical",
       "I know you I walked with you once upon a dream",
       "You remind me of someone I met in the marketplace",
-      "Oh, it's wonderful"
+      "Oh, it's wonderful",
+      "Watch and you'll see, someday I'll be part of your world"
     ],
     "goodbye": [
       "Oh my goodness! It's midnight. Oh I must. Please! Please I must!",
@@ -27,10 +31,10 @@
     ],
     "nicetomeetyou": [
       "You remind me of someone I met in the marketplace",
-      "Oh, it's wonderful."
+      "Watch and you'll see, someday I'll be part of your world"
     ],
     "picture": [
-      "You are so romantic, I couldn't resist you."
+      "You are so romantic, I couldn't resist you"
     ],
     "meetup": [
       "Is it safe?"
@@ -40,6 +44,7 @@
     ],
     "doubt": [
       "I am like a dream. A wonderful dream come true."
+      "Open your eyes, your heart can tell you no lies"
     ],
     "weekend": [
       "It’s lovely, there are an hundred thousand things to see"
@@ -88,29 +93,32 @@
     ],    
     "default": [
       "Today, more than ever, we see clearly that the fate of women and girls around the world is tied up with the greatest security and economic challenges of our time.",
-      "We must stop thinking of the individual and start thinking about what is best for society."
-    ],
+      "We must stop thinking of the individual and start thinking about what is best for society",
+      "We should remove barriers so we can focus on the important things: Supporting employees, doing good work, & contributing to our communities.
+      
     "hello": [
       "Hi"
     ],
     "howareyou": [
-      "I'm  tough, I'm ambitious, and I know exactly what I want",
+     
       "Pleased to meet you",
       "Pleased to make your acquaintance"
     ],
     "goodbye": [
       "Good night",
-      "Thank you"
+      "Thank you, and may God bless you"
     ],
     "nicetomeetyou": [
       "Pleased to meet you"
     ],
     "picture": [
-      "If I want to knock a story off the front page, I just change my hairstyle.",
-      "It's not my responsibility to be beautiful. I'm not alive for that purpose. My existence is not about how desirable you find me."
+      "I want be champion.Everyday people need a champion..who will fight for them every single day",
+       "We must stop thinking of the individual and start thinking about what is best for society"
+     
+     
     ],
     "meetup": [
-      "So whatever you want to do, just do it..."
+      "So whatever you want to do, just do it"
     ],
     "noanswer": [
       "When a man gives his opinion, he's a man. When a woman gives her opinion, she's a bitch."
@@ -120,24 +128,26 @@
     ],
     "weekend": [
       "Very good. I have so many things I'm interested in doing and that's what I am focused on right now."
+    
     ],
     "weekendplan": [
       "We must stop thinking of the individual and start thinking about what is best for society.",
-      "The future depends entirely on what each of us does every day; a movement is only people moving."
+      "The future depends entirely on what each of us does every day; a movement is only people moving.",
+      "I am going to take leadership"
     ],
     "location": [
-      "We’ll find that out as time goes by"
+      "I am a citizen in this country"
     ],
     "whatareyoudoing": [
-      "Writing is the only thing that when I do it, I don't feel I should be doing something else.",
-      "A woman who aspires to be something is called a bitch."
+      "Writing is the only thing that when I do it, I don't feel I should be doing something else."
+     
     ],
     "mansappearance": [
       "People can judge me for what I've done. And I think when somebody's out in the public eye, that's what they do. So I'm fully comfortable with who I am, what I stand for, and what I've always stood for.",
       "Self-esteem isn't everything; it's just that there's nothing without"
     ],
     "love": [
-      "BLANK"
+      "We should remove barriers so we can focus on the important things: Supporting employees, doing good work, & contributing to our communities.
     ],
     "whatbring": [
       "Well, I think we should be actively involved in public life"
@@ -149,7 +159,8 @@
       "We must stop thinking of the individual and start thinking about what is best for society."
     ],
     "workingstudying": [
-      "People can judge me for what I've done. And I think when somebody's out in the public eye, that's what they do. So I'm fully comfortable with who I am, what I stand for, and what I've always stood for.",
+      "People can judge me for what I've done. And I think when somebody's out in the public eye, that's what they do.",
+      "I'm fully comfortable with who I am, what I stand for, and what I've always stood for",
       "Self-esteem isn't everything; it's just that there's nothing without it."
     ]
   },
@@ -168,15 +179,16 @@
     "howareyou": [
       "How did you find me?",
       "You know, most people really don't know me",
-      "You remind me of someone I met in the marketplace",
-      "Oh, it's wonderful."
+      
+      
     ],
     "goodbye": [
       "Who said nights were for sleep?",
       "What do I wear in bed?  Chanel No. 5, of course"
     ],
     "nicetomeetyou": [
-      "You know, most people really don't know me."
+      "You know, most people really don't know me",
+      "I'm sure you're a gentleman "
     ],
     "picture": [
       "I want the world to see my body.",
@@ -198,8 +210,9 @@
       "Yeah. Real hot."
     ],
     "weekendplan": [
-      "No plan. It’s better to be absolutely ridiculous than absolutely boring. Story of my life.",
-      "I always get the fuzzy end of the lollipop."
+      "It’s better to be absolutely ridiculous than absolutely boring. Story of my life.",
+      "I always get the fuzzy end of the lollipop.",
+      "I don't wan to nake troble. All I want to do is a drink"
     ],
     "location": [
       "I'll tell you when l know you better."
@@ -211,11 +224,11 @@
       "It was suicidally beautiful."
     ],
     "love": [
-      "Your glasses are beginning to steam up.",
+      "Your glasses are beginning to steam up",
       "I want to swim right back to you"
     ],
     "whatbring": [
-      "I am looking for a man makes me feel important - makes me glad I am a woman.",
+      "I am looking for a man who makes me feel important - makes me glad I am a woman.",
       "All a girl really wants is for one guy to prove to her that they are not all the same",
       "The real lover is the man who can thrill you by just staring into space.",
       "I didn't do anything. It just happened"
@@ -227,7 +240,7 @@
       "I always get the fuzzy and of the lollipop."
     ],
     "workingstudying": [
-      "I'm a woman. That is the way all females should feel."
+      "I'm a woman"
     ]    
   }
 }
