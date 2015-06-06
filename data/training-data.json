@@ -305,8 +305,6 @@
 		"document": "Hey sexy lady thanks for the like",
 		"category": "nicetomeetyou"
 	},			
-
-
 	{
 		"document": "Now Jenna, that really is a very hot dress....covering an even more fabulous body within it. Love it! You get my vote.",
 		"category": "picture"
@@ -514,9 +512,7 @@
 	{
 		"document": "Jenna I'm not impressed by your social skills for now...",
 		"category": "noanswer"
-	},		
-
-
+	},
 	{
 		"document": "I'm slightly dubious however",
 		"category": "doubt"
@@ -524,9 +520,7 @@
 	{
 		"document": "Are u real??",
 		"category": "doubt"
-	},	
-
-
+	},
 	{
 		"document": "Is this a  fake escort profile?",
 		"category": "doubt"
@@ -551,7 +545,6 @@
 		"document": "This profile fake much?",
 		"category": "doubt"
 	},
-
 	{
 		"document": "Fake?",
 		"category": "doubt"
@@ -607,9 +600,7 @@
 	{
 		"document": "This profile fake much?",
 		"category": "doubt"
-	},	
-
-
+	},
 	{
 		"document": "Or have a porn website you are trying to advertise to me?",
 		"category": "doubt"
@@ -625,9 +616,7 @@
 	{
 		"document": "are you a fake?",
 		"category": "doubt"
-	},	
-
-
+	},
 	{
 		"document": "Hi Jenn, happy weekend ?",
 		"category": "weekend"
@@ -648,12 +637,10 @@
 		"document": "Hi Jenna. How's your weekend so far?",
 		"category": "weekend"
 	},							
-		{
+	{
 		"document": "Hey Jenna, hows your sunday going?",
 		"category": "weekend"
-	},	
-
-
+	},
 	{
 		"document": "Any plan for the weekend?",
 		"category": "weekendplan"
@@ -690,14 +677,10 @@
 		"document": "any plan for this weekend?",
 		"category": "weekendplan"
 	},	
-
-
 	{
 		"document": "Are you a London girl?",
 		"category": "location"
 	},	
-
-
 	{
 		"document": "I'm in Berlin for the first time. Are you from Berlin?",
 		"category": "location"
@@ -735,14 +718,10 @@
 		"document": "At where are you based?",
 		"category": "location"
 	},	
-
-
 	{
 		"document": "Sorry went to sleep after my message, just saw yours",
 		"category": "sorry"
 	},	
-
-
 	{
 		"document": "What you up to?",
 		"category": "whatareyoudoing"
@@ -751,8 +730,6 @@
 		"document": "what're you up to?",
 		"category": "whatareyoudoing"
 	},				
-
-
 	{
 		"document": "I wrote the book",
 		"category": "whatiamdoing"
@@ -779,9 +756,7 @@
 	{
 		"document": "I no I'm good looking Jenna but I must be a little old for you 😆",
 		"category": "whatiamdoing"
-	},	
-
-
+	},
 	{
 		"document": "I think I've fallen in love with you",
 		"category": "love"
@@ -827,8 +802,6 @@
 		"document": "U alright?",
 		"category": "howareyou"
 	},
-
-
 	{
 		"document": "Wowsers you're absolutely gorgeous! Xx",
 		"category": "picture"
@@ -857,7 +830,6 @@
 		"document": "Strike of luck perhaps",
 		"category": "picture"
 	},
-
 	{
 		"document": "Now Jenna, what brings a lovely girl like you to Tinder and what do you seek in these parts?",
 		"category": "whatbring"
@@ -878,8 +850,6 @@
 		"document": "What are you looking for Tinder?",
 		"category": "whatbring"
 	},
-
-
 	{
 		"document": "What’s your deal",
 		"category": "whatsyourdeal"
@@ -896,8 +866,6 @@
 		"document": "Magical ey?",
 		"category": "whatsyourdeal"
 	},
-
-
 	{
 		"document": "that's makes no sense to me",
 		"category": "makesnosense"
@@ -1305,15 +1273,15 @@
 	},
 	{
 		"document": "How's it going?",
-		"category": "howraeyou"
+		"category": "howareyou"
 	},
 	{
 		"document": "In work??",
-		"category": "“whatiamdoing"
+		"category": "whatiamdoing"
 	},
 	{
 		"document": "Are you fake",
-		"category": "“doubt"
+		"category": "doubt"
 	},
 	{
 		"document": "So ... nice wallpaper! :)",
@@ -1369,7 +1337,7 @@
 	},
 	{
 		"document": "Good day ?",
-		"category": "howraeyou"
+		"category": "howareyou"
 	},
 	{
 		"document": "I am not a singer",
