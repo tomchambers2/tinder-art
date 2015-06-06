@@ -1333,7 +1333,7 @@
 	},
 	{
 		"document": "would like to find out more about you",
-		"category": "picture"
+		"category": "workingstudying"
 	},
 	{
 		"document": "The gleam in your eyes is so familiar a gleam and I know it's true",
@@ -1506,5 +1506,9 @@
 	{
 		"document": "Your not much of a talker :p",
 		"category": "noanswer"
+	}
+		{
+		"document": "Hey how re you ? :)",
+		"category": "howareyou"
 	}
 ]
