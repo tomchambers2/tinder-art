@@ -716,11 +716,7 @@
 	{
 		"document": "At where are you based?",
 		"category": "location"
-	},	
-	{
-		"document": "Sorry went to sleep after my message, just saw yours",
-		"category": "sorry"
-	},	
+	},		
 	{
 		"document": "What you up to?",
 		"category": "whatareyoudoing"
