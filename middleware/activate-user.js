@@ -1,4 +1,3 @@
-var Tinder = require('../lib/tinder')
 var emitter = require('../lib/eventemitter')
 
 module.exports = function getMatches(req, res, next) {

@@ -19,6 +19,7 @@ var killUser = require('./middleware/kill-user')
 var activateUser = require('./middleware/activate-user')
 var attachCharacters = require('./middleware/attach-characters')
 var stripUserName = require('./middleware/strip-user-name')
+var killConnections = require('./middleware/kill-connections')
 
 module.exports = function(app) {
 	app.get('/dashboard/:history?', logger, dirtyFacebookAuth, getMatches, getBlocks, generateStats, dashboardHandler)	
@@ -38,6 +39,8 @@ module.exports = function(app) {
 	app.get('/data-input', function(req, res) {
 		return res.render('data-input')
 	})
+
+	app.get('/kill-connections', logger, killConnections)
 
 	app.get('/', logger, dirtyFacebookAuth, getChatPartner, stripUserName, attachCharacters, chatHandler)
 

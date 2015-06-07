@@ -11,6 +11,7 @@ var onDisconnect = require('./handlers/socket/on-disconnect')
 var categorise = require('./handlers/socket/categorise')
 var assignPartner = require('./handlers/socket/assign-partner')
 var getDefaultPhrases = require('./handlers/socket/get-default-phrases')
+var killConnections = require('./handlers/socket/kill-connections')
 
 module.exports = function(io) {
 	io.use(socketAuth.attachCredentials)
@@ -30,6 +31,9 @@ module.exports = function(io) {
 
 	  	socket.activateUserCallback = assignPartner.bind(socket)
 		emitter.on('activate user', socket.activateUserCallback)
+
+		socket.killConnectionsCallback = killConnections.bind(socket)
+		emitter.on('kill connections', socket.killConnectionsCallback)
 		
 	  	socket.on('refresh partner', refreshPartner)
 
