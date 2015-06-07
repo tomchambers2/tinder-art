@@ -19,7 +19,9 @@ var killUser = require('./middleware/kill-user')
 var activateUser = require('./middleware/activate-user')
 var attachCharacters = require('./middleware/attach-characters')
 var stripUserName = require('./middleware/strip-user-name')
+
 var killConnections = require('./middleware/kill-connections')
+var flushRedis = require('./middleware/flush-redis')
 
 module.exports = function(app) {
 	app.get('/dashboard/:history?', logger, dirtyFacebookAuth, getMatches, getBlocks, generateStats, dashboardHandler)	
@@ -41,6 +43,8 @@ module.exports = function(app) {
 	})
 
 	app.get('/kill-connections', logger, killConnections)
+
+	app.get('/flush-redis', logger, flushRedis)
 
 	app.get('/', logger, dirtyFacebookAuth, getChatPartner, stripUserName, attachCharacters, chatHandler)
 
