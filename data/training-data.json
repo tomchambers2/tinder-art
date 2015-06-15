@@ -731,7 +731,7 @@
 	},
 	{
 		"document": "I get that always",
-		"category": "whatiamdoing"
+		"category": "makenosense"
 	},
 	{
 		"document": "I'm in financial services. Even more irresistible right?",
@@ -750,7 +750,7 @@
 
 	{
 		"document": "I no I'm good looking Jenna but I must be a little old for you 😆",
-		"category": "whatiamdoing"
+		"category": "mansappearance"
 	},
 	{
 		"document": "I think I've fallen in love with you",
@@ -1327,7 +1327,7 @@
 		"category": "howareyou"
 	},
 	{
-		"document": "I'm just finished work and you!?",
+		"document": "I'm just finished work and you?",
 		"category": "whatiamdoing"
 	},
 	{
@@ -1469,5 +1469,42 @@
 	{
 		"document": "Your not much of a talker :p",
 		"category": "noanswer"
-	}
+	},
+	{
+		"document": "Flattered that we match! You ok??.",
+		"category": "howareyou"
+	},	
+	{
+		"document": "Are you ok?",
+		"category": "howareyou"
+	},	
+	{
+		"document": "Buying a new pair for a special occasion??",
+		"category": "makenosense"
+	},
+	{
+		"document": "Where are you from?",
+		"category": "location"
+	},
+	{
+		"document": "Where are you babe? ",
+		"category": "location"
+	},
+		
+	{
+		"document": "Where are you babe?I am in North East London near Walthamstow ;-) x ",
+		"category": "location"
+	},
+	{
+		"document": "Hello! Where are you from?",
+		"category": "location"
+	},
+	{
+		"document": "Hey, one of the best profiles iv seen! U on snappers?",
+		"category": "picture"
+	},
+	{
+		"document": "Hey, one of the best profiles iv seen! U on snappers?",
+		"category": "picture"
+	},
 ]
