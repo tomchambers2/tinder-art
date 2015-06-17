@@ -1,10 +1,10 @@
 [
 	{
-		"document": "Hi jenna",
+		"document": "Hi",
 		"category": "hello"
 	},
 	{
-		"document": "Hello Jenna",
+		"document": "Hello Yuki",
 		"category": "hello"
 	},
 	{
@@ -16,7 +16,7 @@
 		"category": "hello"
 	},
 	{
-		"document": "Hi Jenna, thanks for the Swipe!",
+		"document": "Hi, thanks for the Swipe!",
 		"category": "hello"
 	},
 
@@ -153,23 +153,23 @@
 		"category": "howareyou"
 	},		
 	{
-		"document": "hi jenna, how are you?",
+		"document": "hi, how are you?",
 		"category": "howareyou"
 	},	
 			{
-		"document": "hey jenna, how's your weekend going?",
+		"document": "hey, how's your weekend going?",
 		"category": "howareyou"
 	},	
 	{
-		"document": "hi jenna, how's it going?",
+		"document": "hi , how's it going?",
 		"category": "howareyou"
 	},
 	{
-		"document": "Hey Jenna, How's your weekend going?",
+		"document": "Hey, How's your weekend going?",
 		"category": "howareyou"
 	},				
 	{
-		"document": "Hi Jenna, how's it going?",
+		"document": "Hi, how's it going?",
 		"category": "howareyou"
 	},	
 	{
@@ -177,7 +177,7 @@
 		"category": "howareyou"
 	},	
 	{
-		"document": "Hello Jenna, you look great. How are you?",
+		"document": "Hello, you look great. How are you?",
 		"category": "howareyou"
 	},	
 	{
@@ -185,15 +185,15 @@
 		"category": "howareyou"
 	},
 	{
-		"document": "Hello J ! Are you free tonight to party ? Nice pic. Nice to meet. And Sorry for my french accent ;)",
+		"document": "Hello! Are you free tonight to party ? Nice pic. Nice to meet. And Sorry for my french accent ;)",
 		"category": "howareyou"
 	},	
 	{
-		"document": "Hi Jenna How are you?",
+		"document": "Hi How are you?",
 		"category": "howareyou"
 	},
 	{
-		"document": "Hi Jenna I'm nick love ur profile wanna chat",
+		"document": "Hi I'm nick love ur profile wanna chat",
 		"category": "howareyou"
 	},	
 	{
@@ -201,15 +201,15 @@
 		"category": "howareyou"
 	},
 	{
-		"document": "Hi Jenna How are you ?",
+		"document": "Hi How are you ?",
 		"category": "howareyou"
 	},	
 	{
-		"document": "Hi Jenna ...glad we matched...",
+		"document": "Hi ...glad we matched...",
 		"category": "howareyou"
 	},
 	{
-		"document": "Hello Jenna - how are u?",
+		"document": "Hello - how are u?",
 		"category": "howareyou"
 	},	
 	{
@@ -229,7 +229,7 @@
 		"category": "howareyou"
 	},
 	{
-		"document": "Hi Jenna, I believe we have both matched.",
+		"document": "Hi, I believe we have both matched.",
 		"category": "howareyou"
 	},	
 	{
@@ -249,7 +249,7 @@
 		"category": "howareyou"
 	},
 	{
-		"document": "Soooo Miss Jenna.",
+		"document": "Soooo Miss",
 		"category": "howareyou"
 	},
 	{
@@ -306,7 +306,7 @@
 		"category": "nicetomeetyou"
 	},			
 	{
-		"document": "Now Jenna, that really is a very hot dress....covering an even more fabulous body within it. Love it! You get my vote.",
+		"document": "Now Yuki, that really is a very hot dress....covering an even more fabulous body within it. Love it! You get my vote.",
 		"category": "picture"
 	},
 	{
@@ -370,7 +370,7 @@
 		"category": "picture"
 	},
 	{
-		"document": "Hi Jenna I'm nick love ur profile wanna chat",
+		"document": "Hi I'm nick love ur profile wanna chat",
 		"category": "picture"
 	},
 	{
@@ -403,11 +403,11 @@
 		"category": "picture"
 	},
 	{
-		"document": "Hot pic Jenna x",
+		"document": "Hot pic x",
 		"category": "picture"
 	},
 	{
-		"document": "Hi Jenna love your PIC how are you",
+		"document": "Hi love your PIC how are you",
 		"category": "picture"
 	},
 	{
@@ -509,7 +509,7 @@
 		"category": "noanswer"
 	},
 	{
-		"document": "Jenna I'm not impressed by your social skills for now...",
+		"document": "I'm not impressed by your social skills for now...",
 		"category": "noanswer"
 	},
 	{
@@ -617,7 +617,7 @@
 		"category": "doubt"
 	},
 	{
-		"document": "Hi Jenn, happy weekend ?",
+		"document": "Hi Yuki, happy weekend ?",
 		"category": "weekend"
 	},		
 	{
@@ -625,11 +625,11 @@
 		"category": "weekend"
 	},	
 	{
-		"document": "Hey Jenna, How's your weekend going?",
+		"document": "Hey Yuki, How's your weekend going?",
 		"category": "weekend"
 	},	
 	{
-		"document": "I hope you're having a good weekend Jenna. I'm on my way home from a dinner dance.",
+		"document": "I hope you're having a good weekend Yuki. I'm on my way home from a dinner dance.",
 		"category": "weekend"
 	},	
 	{
@@ -637,7 +637,7 @@
 		"category": "weekend"
 	},							
 	{
-		"document": "Hey Jenna, hows your sunday going?",
+		"document": "Hey Yuki, hows your sunday going?",
 		"category": "weekend"
 	},
 	{
@@ -649,7 +649,7 @@
 		"category": "weekendplan"
 	},
 	{
-		"document": "Hi Jenna How are you? What is your plan for a weekend?",
+		"document": "Hi Yuki How are you? What is your plan for a weekend?",
 		"category": "weekendplan"
 	},	
 	{
@@ -758,7 +758,7 @@
 	},
 
 	{
-		"document": "Hi Jenna love your PIC how are you",
+		"document": "Hi Yuki love your PIC how are you",
 		"category": "howareyou"
 	},
 	{
@@ -826,7 +826,7 @@
 		"category": "picture"
 	},
 	{
-		"document": "Now Jenna, what brings a lovely girl like you to Tinder and what do you seek in these parts?",
+		"document": "Now Yuki, what brings a lovely girl like you to Tinder and what do you seek in these parts?",
 		"category": "whatbring"
 	},
 	{
@@ -1469,5 +1469,29 @@
 	{
 		"document": "Your not much of a talker :p",
 		"category": "noanswer"
+	},	
+	{
+		"document": "You are robot"
+		"category": "doubt"
+	},
+	{
+		"document": "In what way? Be more specific."
+		"category": "makenosense"
+	},
+	{
+		"document": "really like your necklace ;) "
+		"category": "picture"
+	},
+	{
+		"document": "What part "
+		"category": "makenosense"
+	},
+	{
+		"document": "beautiful name"
+		"category": "picture"
+	},
+	{
+		"document": "Hey Yuki what you upto tonight?"
+		"category":  "whatareyoudoing"
 	}
 ]
