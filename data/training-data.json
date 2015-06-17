@@ -1296,7 +1296,7 @@
 	},
 	{
 		"document": "would like to find out more about you",
-		"category": "picture"
+		"category": "workingstudying"
 	},
 	{
 		"document": "The gleam in your eyes is so familiar a gleam and I know it's true",
@@ -1493,5 +1493,9 @@
 	{
 		"document": "Hey Yuki what you upto tonight?"
 		"category":  "whatareyoudoing"
+	}
+		{
+		"document": "Hey how re you ? :)",
+		"category": "howareyou"
 	}
 ]
