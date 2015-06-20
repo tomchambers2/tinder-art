@@ -1538,5 +1538,45 @@
 	{
 		"document": "Sing what song???",
 		"category": "love"
-	}
+	},
+	{
+		"document": "Wow, You are very very sexy.. Where are you from??",
+		"category": "location"
+	},
+	{
+		"document": "Where does your name originate from? ",
+		"category": "location"
+	},
+	{
+		"document": "How are you doing? ",
+		"category": "howareyou"
+	},
+	{
+		"document": "Want to meet in person?",
+		"category": "meetup"
+	},
+	{
+		"document": "So yuki, are you even real?",
+		"category": "doubt"
+	},
+	{
+		"document": "What are you looking for from guys on here??",
+		"category": "whatbring"
+	},
+	{
+		"document": "which part of London are you in?",
+		"category": "location"
+	},
+	{
+		"document": "Hello good looking, nice to meet you!",
+		"category": "nicetomeetyou"
+	},
+	{
+		"document": "heyy",
+		"category": "howareyou"
+	},
+	{
+		"document": "I think you're beautiful...",
+		"category": "picture"
+	},
 ]
