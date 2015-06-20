@@ -1538,7 +1538,6 @@
 	{
 		"document": "Sing what song???",
 		"category": "love"
-<<<<<<< HEAD
 	},	
 	{
 		"document": "Same, how are you this evening?",
@@ -1616,11 +1615,9 @@
 		"document": "Hi yuki..how you doing? x",
 		"category": "howareyou"
 	},
-		{
+	{
 		"document": "Me too, you are so beauty",
 		"category": "picture"
-	}
-=======
 	},
 	{
 		"document": "Wow, You are very very sexy.. Where are you from??",
