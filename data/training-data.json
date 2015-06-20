@@ -1538,6 +1538,7 @@
 	{
 		"document": "Sing what song???",
 		"category": "love"
+<<<<<<< HEAD
 	},	
 	{
 		"document": "Same, how are you this evening?",
@@ -1660,5 +1661,9 @@
 	{
 		"document": "I think you're beautiful...",
 		"category": "picture"
+	},
+	{
+		"document": "Hi Yuki, how're you doing?",
+		"category": "howareyou"
 	}
 ]
