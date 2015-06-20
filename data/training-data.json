@@ -1538,5 +1538,85 @@
 	{
 		"document": "Sing what song???",
 		"category": "love"
+	},	
+	{
+		"document": "Same, how are you this evening?",
+		"category": "howareyou"
+	},
+	{
+		"document": "Tell me more about you",
+		"category": "“workingstudying"
+	},
+	{
+		"document": "Where do u live",
+		"category": "location"
+	},
+	{
+		"document": "Haha ,you are jocking",
+		"category": "makesnosense"
+	},
+	{
+		"document": "Your word are such machine word ,are you real human or answering machine !",
+		"category": "doubt"
+	},
+	{
+		"document": "Really? Are you a real person?",
+		"category": "doubt"
+	},
+	{
+		"document": "Are you a philosopher?",
+		"category": "workingstudying"
+	},
+	{
+		"document": "What you up to tonight",
+		"category": "weekendplan"
+	},
+	{
+		"document": "But I'm guessing you're not from London generally?",
+		"category": "location"
+	},
+	{
+		"document": "I've had such a tough week",
+		"category": "whatareyoudoing"
+	},
+	{
+		"document": "photoshop",
+		"category": "doubt"
+	},
+	{
+		"document": "Were u from",
+		"category": "location"
+	},
+	{
+		"document": "You too. What u up to?",
+		"category": "weekendplan"
+	},
+	{
+		"document": "Hi yuki..how you doing? x",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hey Yuki",
+		"category": "hello"
+	},
+	{
+		"document": "Hey Yuki",
+		"category": "hello"
+	},
+	{
+		"document": "Hey Yuki! Is that ur name ? If so where does it originate from?",
+		"category": "location"
+	},
+	{
+		"document": "u having a good friday nite?",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hi yuki..how you doing? x",
+		"category": "howareyou"
+	},
+		{
+		"document": "Me too, you are so beauty",
+		"category": "picture"
 	}
 ]
