@@ -1662,5 +1662,49 @@
 	{
 		"document": "Hi Yuki, how're you doing?",
 		"category": "howareyou"
+	},
+	{
+		"document": "what are you looking for",
+		"category": "whatbring"
+	},
+	{
+		"document": "Pleasure is mind babe, how are you?",
+		"category": "whatbring"
+	},
+	{
+		"document": "Good evening yuki, how you doing",
+		"category": "howareyou"
+	},
+	{
+		"document": "Do you have any Facebook or whatsapp we could chat??",
+		"category": "meetup"
+	},
+	{
+		"document": "Hey, nice shot!",
+		"category": "picture"
+	},
+	{
+		"document": "what u up to",
+		"category": "weekendplan"
+	},
+	{
+		"document": "So do u have Skype ?",
+		"category": "meetup"
+	},
+	{
+		"document": "Yo",
+		"category": "Hi"
+	},
+	{
+		"document": "What's your occupation?",
+		"category": "workingstudying"
+	},
+	{
+		"document": "What's your number? Let's get in touch & get to know each other sometime soon",
+		"category": "meetup"
+	},
+		{
+		"document": "What's your number? Let's get in touch & get to know each other sometime soon",
+		"category": "meetup"
 	}
 ]
