@@ -1666,5 +1666,16 @@
 	{
 		"document": "Ok where are you from ?",
 		"category": "location"
+	},
+	{
+		"document": "workingstudying",
+		"category": "howareyou"
+	},
+	{
+		"document": "workingstudying",
+		"category": "howareyou"
 	}
+
+
+	
 ]
