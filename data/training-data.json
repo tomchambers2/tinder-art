@@ -1662,5 +1662,9 @@
 	{
 		"document": "Hi Yuki, how're you doing?",
 		"category": "howareyou"
+	},
+	{
+		"document": "Ok where are you from ?",
+		"category": "location"
 	}
 ]
