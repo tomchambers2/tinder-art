@@ -1662,5 +1662,16 @@
 	{
 		"document": "Hi Yuki, how're you doing?",
 		"category": "howareyou"
+	},
+	{
+		"document": "workingstudying",
+		"category": "howareyou"
+	},
+	{
+		"document": "workingstudying",
+		"category": "howareyou"
 	}
+
+
+	
 ]
