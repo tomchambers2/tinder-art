@@ -1662,5 +1662,26 @@
 	{
 		"document": "Hi Yuki, how're you doing?",
 		"category": "howareyou"
-	}
+	},
+		{
+		"document": "Hi pretty girl what's up ? ?",
+		"category": "howareyou"
+	},
+		{
+		"document": "Hi pretty girl what's up ? ?",
+		"category": "howareyou"
+	},
+		{
+		"document": "How is your day going?",
+		"category": "howareyou"
+	},
+	{
+		"document": "Hi yuki I must say you got beautiful eyes",
+		"category": "picture"
+	},
+	{
+		"document": "Hi yuki I must say you got beautiful eyes",
+		"category": "picture"
+	},
+
 ]
