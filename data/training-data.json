@@ -1663,6 +1663,7 @@
 		"document": "Hi Yuki, how're you doing?",
 		"category": "howareyou"
 	},
+<<<<<<< HEAD
 	{
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1680,6 +1681,8 @@
 		"category": "howareyou"
 <<<<<<< HEAD
 	},
+=======
+>>>>>>> origin/yuki0109-patch-3
 		{
 		"document": "Hi pretty girl what's up ? ?",
 		"category": "howareyou"
@@ -1699,6 +1702,7 @@
 	{
 		"document": "Hi yuki I must say you got beautiful eyes",
 		"category": "picture"
+<<<<<<< HEAD
 <<<<<<< HEAD
 	},{
 		"document": "what are you looking for",
@@ -1744,7 +1748,4 @@
 		"document": "What's your number? Let's get in touch & get to know each other sometime soon",
 		"category": "meetup"
 	}
-
-
-	
 ]
