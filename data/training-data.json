@@ -1663,28 +1663,19 @@
 		"document": "Hi Yuki, how're you doing?",
 		"category": "howareyou"
 	},
-<<<<<<< HEAD
-<<<<<<< HEAD
 	{
-<<<<<<< HEAD
-<<<<<<< HEAD
 		"document": "Ok where are you from ?",
 		"category": "location"
 	},
 	{
-=======
->>>>>>> origin/yuki0109-patch-2
 		"document": "workingstudying",
 		"category": "howareyou"
 	},
 	{
 		"document": "workingstudying",
 		"category": "howareyou"
-<<<<<<< HEAD
 	},
-=======
->>>>>>> origin/yuki0109-patch-3
-		{
+	{
 		"document": "Hi pretty girl what's up ? ?",
 		"category": "howareyou"
 	},
