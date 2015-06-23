@@ -1665,16 +1665,20 @@
 	},
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		"document": "Ok where are you from ?",
 		"category": "location"
 	},
 	{
+=======
+>>>>>>> origin/yuki0109-patch-2
 		"document": "workingstudying",
 		"category": "howareyou"
 	},
 	{
 		"document": "workingstudying",
 		"category": "howareyou"
+<<<<<<< HEAD
 	},
 		{
 		"document": "Hi pretty girl what's up ? ?",
@@ -1740,4 +1744,7 @@
 		"document": "What's your number? Let's get in touch & get to know each other sometime soon",
 		"category": "meetup"
 	}
+
+
+	
 ]
