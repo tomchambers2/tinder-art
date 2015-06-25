@@ -12,8 +12,16 @@ html, body {
 }
 
 i.fat {
+	margin-top: 15px;
 	font-size: 30px;
 	color: #D24F3B;
+}
+
+.next-boy {
+  margin-top: 37px;
+  margin-right: -76px;
+  font-size: 24px;
+  display: block;	
 }
 
 .face {
