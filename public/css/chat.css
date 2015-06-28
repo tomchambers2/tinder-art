@@ -11,6 +11,10 @@ html, body {
 	width: 100%;
 }
 
+.man-container {
+	padding-left: 13px;
+}
+
 i.fat {
 	margin-top: 15px;
 	font-size: 30px;

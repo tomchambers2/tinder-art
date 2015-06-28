@@ -224,6 +224,9 @@ $(document).ready(function() {
   $('.next-person').click(function() {
     refreshPartner()
   })
+  $('.next-boy').click(function() {
+    refreshPartner()
+  })  
   
   getUpdates()
 
