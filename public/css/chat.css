@@ -12,7 +12,7 @@ html, body {
 }
 
 .man-container {
-	padding-left: 135px;
+	padding-left: 175px;
 }
 
 i.fat {
@@ -22,10 +22,14 @@ i.fat {
 }
 
 .next-boy {
-  margin-top: 37px;
+  margin-top: 30px;
   margin-right: -76px;
   font-size: 24px;
   display: block;	
+
+}
+.next-boy:hover {
+	cursor: pointer;
 }
 
 .face {

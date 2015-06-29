@@ -222,9 +222,11 @@ $(document).ready(function() {
   }
 
   $('.next-person').click(function() {
+    console.log("Hit next person")
     refreshPartner()
   })
   $('.next-boy').click(function() {
+    console.log("Hit next boy")
     refreshPartner()
   })  
   
