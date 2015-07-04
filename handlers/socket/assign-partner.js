@@ -7,11 +7,11 @@ module.exports = function(userId) {
 	var tinder = new Tinder(this.facebookUser.facebookUserId, this.facebookUser.token)
 	
 	var self = this
-	console.log('wil get');
+	console.log('assigning a user ----',userId);
 	tinder.getChatPartnerDetails(userId, function(err, match) {
 		console.log('GOT A NEW USER?',match);
-		if (err) throw ('Could not get new chat partner'+err)
-		if (!match.person) {
+		//if (err) throw ('Could not get new chat partner'+err)
+		if (!match.person || err) {
 			match.person = {
 				_id: null,
 				name: 'Unknown'
