@@ -29,10 +29,9 @@ function refreshCredentials(callback) {
 	};
 
 	request(options, function(err, response, body) {
-		console.log('got reply',err,response.request.uri)
 		var access_token = /access_token=([a-zA-Z0-9]+)/.exec(response.request.uri.hash)
 		var expiresIn = /expires_in=([0-9]+)$/.exec(response.request.uri.hash)
-		console.log(expiresIn);
+		if (!access_token || !expiresIn) return callback('Facebook cookie appears to have expired');
 		storeCredentials(access_token[1], userId, expiresIn[1])
 
 		callback(err, userId, access_token[1])
@@ -54,6 +53,7 @@ module.exports = function(req, res, next) {
 	getCredentials(function(err, facebookUser) {
 		if (err) return next(err)
 		if (!facebookUser) return refreshCredentials(function(err, userId, token) {
+			if (err) return next(err)
 			req.facebookUserId = userId
 			req.facebookToken = token
 			next()
